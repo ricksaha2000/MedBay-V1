@@ -31,7 +31,7 @@ class Profile(models.Model):
     cuisines = models.TextField(max_length=1500)
     medicalhistory = models.TextField(max_length=1500)
     image = models.ImageField(upload_to='website/images',
-                              default=r"C:\\Users\\jayit\\Downloads\\medbay\\AI DIET PLANNER Microservice\\media\\website\\images\\avtar.png")
+                              default=r"C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\AI DIET PLANNER Microservice\\media\\website\\images\\avtar.png")
     second_time = models.BooleanField(default="False")
 
     def __str__(self):
