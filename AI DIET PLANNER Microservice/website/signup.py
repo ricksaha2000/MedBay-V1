@@ -65,7 +65,7 @@ def signup_user(request):
 
 def fill_CSV(user, lst):
 
-    filename = r'C:\\Users\\jayit\\Downloads\\medbay\\AI DIET PLANNER Microservice\\website\\csvfile\\user_Profiles.csv'
+    filename = r'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\AI DIET PLANNER Microservice\\website\\csvfile\\user_Profiles.csv'
     df = pd.read_csv(filename)
 
     if user in df.values:  # user is variable for user
