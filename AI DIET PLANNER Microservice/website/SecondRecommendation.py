@@ -142,12 +142,12 @@ def Recommend(request):
 
         # profiles of all users
         profiles = pd.read_csv(
-            r'C:\\Users\\jayit\\Downloads\\medbay\\AI DIET PLANNER Microservice\\website\\csvfile\\user_Profiles.csv')
+            r'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\AI DIET PLANNER Microservice\\website\\csvfile\\user_Profiles.csv')
         # recent activities of current user (meals liked,rated,searched,Purchased)
         recent_activity = pd.read_csv(
-            r'C:\\Users\\jayit\\Downloads\\medbay\\AI DIET PLANNER Microservice\\website\\csvfile\\recent_activity.csv')
+            r'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\AI DIET PLANNER Microservice\\website\\csvfile\\recent_activity.csv')
         dataset = pd.read_csv(
-            r'C:\\Users\\jayit\\Downloads\\medbay\\AI DIET PLANNER Microservice\\website\\dataset.csv')  # main dataset
+            r'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\AI DIET PLANNER Microservice\\website\\dataset.csv')  # main dataset
 
         ob = Recommender(profiles, recent_activity, dataset)
         result = ob.recommend(user_id)
