@@ -1,0 +1,678 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "howdy",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hey there",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hallo",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "I am having headache and migraine",
+        "intent": "disease_predict",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "headache",
+            "entity": "disease_predict"
+          }
+        ]
+      },
+      {
+        "text": "I am having headache",
+        "intent": "disease_predict",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "headache",
+            "entity": "disease_predict"
+          }
+        ]
+      },
+      {
+        "text": "I am having migraine",
+        "intent": "disease_predict",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "migraine",
+            "entity": "disease_predict"
+          }
+        ]
+      },
+      {
+        "text": "I am having fever. Feel like vomitting.",
+        "intent": "disease_predict",
+        "entities": [
+          {
+            "start": 12,
+            "end": 17,
+            "value": "fever",
+            "entity": "disease_predict"
+          }
+        ]
+      },
+      {
+        "text": "I am suffering from stomach ache",
+        "intent": "disease_predict",
+        "entities": [
+          {
+            "start": 20,
+            "end": 32,
+            "value": "stomach ache",
+            "entity": "disease_predict"
+          }
+        ]
+      },
+      {
+        "text": "I am suffering from anxiety and depression",
+        "intent": "disease_predict",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "headache",
+            "entity": "disease_predict"
+          }
+        ]
+      },
+      {
+        "text": "I am not feeling well",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "I am not feeling well today",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "I need to immediately consult a doctor. I am not feeling well since morning.",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "I need help. Need to consult a doctor.",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "Am not feeling well since the past few days.",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "Please help me.",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "I really need to see a doctor. Not feeling well",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "Please help me to understand what disease am I suffering from?",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "What am I suffering from?",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "What disease am I suffering from?",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "What is happening to me? What am I suffering from?",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "Why am I not feeling well? Please help me.",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "I dont know What am I suffering from.",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "What disease do I have??",
+        "intent": "ask_symptom_back",
+        "entities": []
+      },
+      {
+        "text": "vomiting,fever,cough",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "vomiting,headache,fever,cough",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "fever,cough",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "vomiting",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "fever",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "stomach ache,fever,cough",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "loss of smell,fever,sneeze",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "anxiety,fever,depression",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "anxiety,fever,sneezing",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "skin rash,fever",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "body ache,skin rash",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "anxiety,fever,sneezing",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "blister,skin rash,body ache",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "blister,skin rash",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "itching,skin eruption",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "itching,skin eruption,blister,skin rash,fever,coughing,red sores",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "continuous sneezing,shivering",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "continuous sneezing,shivering,chills",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "joint pain,sneezing,shivering",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "joint pain,acidity,shivering",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "joint pain,stomach pain,ulcers",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "joint pain,spotting urination,fatigue,shivering",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "fatigue,spotting urination,muscle pain",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "muscle pain,weight gain,weak",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "body pain,fatigue,shivering,weight gain",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "mood swings,spotting urination,fatigue,shivering",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "cold hands,restlessness,mood swings,fatigue,shivering",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "joint pain,lethargy,high fever",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "acidity,throat pain,breathlessness,high fever",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "acidity,dark urine,nausea,yellowing_of_eyes",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "acidity,swelling of stomach,swelled lymph_nodes,yellowing of eyes",
+        "intent": "disease_predict_from_symptom",
+        "entities": []
+      },
+      {
+        "text": "I want to consult a doctor",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "doctor",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "I want to consult a doctor for my symptoms",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "doctor",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "I want to consult a doctor for my disease",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "doctor",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "I wish to consult a doctor",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "doctor",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "I wish to consult a doctor immediately",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "doctor",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "I want to consult a doctor immediately",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "doctor",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "Kindly suggest me some doctors",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 23,
+            "end": 30,
+            "value": "doctors",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "Can you kindly recommend me doctors for my symptoms",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 28,
+            "end": 35,
+            "value": "doctors",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "I want to know drugs for my illness",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "Kindly suggest me some drugs",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 23,
+            "end": 28,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "Can you kindly recommend me drugs for my symptoms",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 28,
+            "end": 33,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "I wish to see a doctor",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "doctor",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "Kindly suggest me any doctors",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "doctors",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "Can you kindly recommend me doctors",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 28,
+            "end": 35,
+            "value": "doctors",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "Suggest me some doctors",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "doctors",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "Help me find a doctor",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "doctors",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "I want to see a doctor",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "doctors",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+      {
+        "text": "I want a doctor",
+        "intent": "doctor_predict",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "doctors",
+            "entity": "doctor_predict"
+          }
+        ]
+      },
+
+      {
+        "text": "Please tell me drugs for my illness",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "Kindly suggest me some drugs",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 23,
+            "end": 28,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "Can you kindly recommend me drugs for my symptoms",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 28,
+            "end": 33,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "I want to know about drugs for my treatment",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "Kindly prescribe me some drugs",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 25,
+            "end": 30,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "Can you recommend drugs for my symptoms",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "What drugs shall I take?",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "Which drug shall I take for the disease?",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 6,
+            "end": 10,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "Please recommend me drugs for my disease",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 20,
+            "end": 24,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      },
+      {
+        "text": "I need to buy drugs",
+        "intent": "drug_predict",
+        "entities": [
+          {
+            "start": 14,
+            "end": 19,
+            "value": "drugs",
+            "entity": "drug_predict"
+          }
+        ]
+      }
+
+
+
+
+
+
+
+
+    ]
+  }
+}
