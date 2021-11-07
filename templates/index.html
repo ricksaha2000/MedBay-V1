@@ -1,0 +1,1221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+		<head>
+		<!--meta-->
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="WordPress 5.4.4" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="description" content="Health Medical Clinic WordPress Theme" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--style-->
+		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://quanticalabs.com/wp_themes/medicenter/feed/" />
+		<link rel="pingback" href="http://quanticalabs.com/wp_themes/medicenter/xmlrpc.php" />
+					<link rel="shortcut icon" href="http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/images/favicon.ico" />
+					<title>MedBay</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="MediCenter &raquo; Feed" href="http://quanticalabs.com/wp_themes/medicenter/feed/" />
+<link rel="alternate" type="application/rss+xml" title="MediCenter &raquo; Comments Feed" href="http://quanticalabs.com/wp_themes/medicenter/comments/feed/" />
+		 {% comment %} <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> {% endcomment %}
+<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/quanticalabs.com\/wp_themes\/medicenter\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+
+
+.widgeting {
+	display: none;
+	width: 320px;
+	right: 15px;
+	height: 450px;
+	bottom: 5%;
+	position: fixed;
+	background: #f6f6f6;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0px 2px 10px 1px #b5b5b5;
+}
+
+.chat_header {
+	height: 10%;
+	background: #6072e6;
+	/* #6072e6 */
+	border-radius: 10px 10px 0px 0px;
+	padding: 5px;
+	font-size: 20px;
+}
+
+.chats {
+	height: 340px;
+	padding: 5px;
+	margin-top: 5px;
+	border-radius: 1px;
+	overflow-y: scroll;
+	transition: 0.2s;
+}
+
+div.chats::-webkit-scrollbar {
+	width: 0px;
+	/* remove scrollbar space /
+    background: transparent;
+    / optional: just make scrollbar invisible */
+}
+
+
+/* Track */
+
+div.chats::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+
+/* Handle */
+
+div.chats::-webkit-scrollbar-thumb {
+	background: #647aed;
+}
+
+
+/* Handle on hover */
+
+div.chats::-webkit-scrollbar-thumb:hover {
+	background: #b30000;
+}
+
+#close {
+	cursor: pointer;
+}
+
+.clearfix {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.message {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.botAvatar {
+	border-radius: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	float: left;
+	margin-left: 5px;
+	border: 2px solid #6072e6;
+}
+
+.botMsg {
+	float: left;
+	margin-top: 5px;
+	background: #ffffff;
+	box-shadow: 2px 5px 5px 1px #efeef5;
+	border: 1px solid #ffffff;
+	margin-left: 0.5em;
+	padding: 0.6em 1em;
+	border-radius: 1.5em;
+	max-width: 55%;
+	min-width: 25%;
+	font-size: 12px;
+	word-wrap: break-word;
+}
+
+.userMsg {
+	animation: animateElement linear 0.2s;
+	animation-iteration-count: 1;
+	margin-top: 5px;
+	word-wrap: break-word;
+	padding: 0.6em 1em;
+	float: right;
+	margin-right: 0.5em;
+	background: #6072e6;
+	border: 1px solid #6072e6;
+	color: #fff;
+	border-radius: 1.5em;
+	margin-bottom: 0.15em;
+	font-size: 12px;
+	max-width: 55%;
+	min-width: 25%;
+	line-height: 1.5em;
+}
+
+.userAvatar {
+	animation: animateElement linear 0.3s;
+	animation-iteration-count: 1;
+	border-radius: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	float: right;
+	margin-right: 5px;
+	border: 2px solid #6072e6;
+}
+
+.singleCard {
+	/* height: 200px; */
+	padding-left: 10%;
+	padding-right: 10px;
+}
+
+.suggestions {
+	padding: 5px;
+	width: 80%;
+	border-radius: 10px;
+	background: #ffffff;
+	box-shadow: 2px 5px 5px 1px #dbdade;
+}
+
+.cardsImage {
+	width: 100%;
+	height: 80%;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.keypad {
+	height: 45px;
+	position: absolute;
+	bottom: 10px;
+	width: 320px;
+}
+
+.usrInput {
+	background: #f1f0f0;
+	{% comment %} padding: 0.5em; {% endcomment %}
+	width: 90%;
+	margin-left: 4%;
+	border-radius: 20px;
+	box-shadow: 0px 2px 10px 1px #b5b5b5;
+	border: 0;
+	padding-left: 15px;
+	height: 40px;
+}
+
+input:focus {
+	outline: none;
+}
+
+video:focus {
+	outline: none;
+}
+
+.menuTitle {
+	padding: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.menu {
+	padding: 5px;
+}
+
+.menuChips {
+	display: block;
+	background: #6072e6;
+	color: #fff;
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	border-radius: 15px;
+	font-size: 14px;
+	word-wrap: break-word;
+}
+
+.imgcard {
+	object-fit: cover;
+	width: 80%;
+	height: 90%;
+	border-radius: 10px 10px 10px 10px;
+	margin-left: 1%;
+}
+
+.chip {
+	background-color: #6072e6;
+	color: #fff;
+	font-weight: normal;
+	font-weight: 0;
+	text-align: center;
+}
+
+@keyframes animateElement {
+	0% {
+		opacity: 0;
+		transform: translate(0px, 10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+}
+
+.imgProfile {
+	box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 rgba(0, 0, 0, 0.12);
+	background: white;
+	border-radius: 50px;
+	width: 60%;
+	padding: 2%;
+}
+
+.profile_div {
+	/* display: none; */
+	position: fixed;
+	padding: 5px;
+	width: 10%;
+	bottom: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+.profileIcon {
+	height: 15%;
+	align-items: center;
+	float: left;
+	margin-right: 10px;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-includes/css/dist/block-library/style.min.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-includes/css/dist/block-library/theme.min.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.2.2' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='woocommerce-layout-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=3.8.1' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=3.8.1' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='google-font-source-sans-pro-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C200%2C300%2C600%2C700&#038;subset=latin%2Clatin-ext&#038;ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='google-font-open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300&#038;subset=latin%2Clatin-ext&#038;ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='google-font-pt-serif-css'  href='//fonts.googleapis.com/css?family=PT+Serif%3A400italic&#038;subset=latin%2Clatin-ext&#038;ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='reset-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/style/reset.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='superfish-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/style/superfish.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='prettyPhoto-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/style/prettyPhoto.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-qtip-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/style/jquery.qtip.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='odometer-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/style/odometer-theme-default.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='animations-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/style/animations.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='main-style-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/style.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/style/responsive.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-custom-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/woocommerce/style.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-responsive-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/woocommerce/responsive.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mc-features-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/fonts/features/style.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mc-template-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/fonts/template/style.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mc-social-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/fonts/social/style.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/custom.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.0'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.2.2'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp_themes\/medicenter\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/wp_themes\/medicenter\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"http:\/\/quanticalabs.com\/wp_themes\/medicenter\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=3.8.1'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart.js?ver=6.1'></script>
+<link rel='https://api.w.org/' href='http://quanticalabs.com/wp_themes/medicenter/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://quanticalabs.com/wp_themes/medicenter/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://quanticalabs.com/wp_themes/medicenter/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 5.4.4" />
+<meta name="generator" content="WooCommerce 3.8.1" />
+<link rel="canonical" href="http://quanticalabs.com/wp_themes/medicenter/" />
+<link rel='shortlink' href='http://quanticalabs.com/wp_themes/medicenter/' />
+<link rel="alternate" type="application/json+oembed" href="http://quanticalabs.com/wp_themes/medicenter/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fquanticalabs.com%2Fwp_themes%2Fmedicenter%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://quanticalabs.com/wp_themes/medicenter/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fquanticalabs.com%2Fwp_themes%2Fmedicenter%2F&#038;format=xml" />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<meta name="generator" content="Powered by Slider Revolution 6.2.2 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">function setREVStartSize(e){
+			try {
+				var pw = document.getElementById(e.c).parentNode.offsetWidth,
+					newh;
+				pw = pw===0 || isNaN(pw) ? window.innerWidth : pw;
+				e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+				e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+				e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+				e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+				e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+				e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+				e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+				if(e.layout==="fullscreen" || e.l==="fullscreen")
+					newh = Math.max(e.mh,window.innerHeight);
+				else{
+					e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+					for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+					e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+					e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+					for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+
+					var nl = new Array(e.rl.length),
+						ix = 0,
+						sl;
+					e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+					e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+					e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+					e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+					for (var i in e.rl) nl[i] = e.rl[i]<window.innerWidth ? 0 : e.rl[i];
+					sl = nl[0];
+					for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+					var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+
+					newh =  (e.type==="carousel" && e.justify==="true" ? e.gh[ix] : (e.gh[ix] * m)) + (e.tabh + e.thumbh);
+				}
+
+				if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));
+				document.getElementById(e.c).height = newh;
+				window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";
+			} catch(e){
+				console.log("Failure at Presize of Slider:" + e)
+			}
+		  };</script>
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1534852698410{background-color: #f0f0f0 !important;}.vc_custom_1540998747342{background-image: url(http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-1.jpg?id=3790) !important;}.vc_custom_1535723622030{background-color: #ffffff !important;}.vc_custom_1536922373069{background-color: #f8f8f8 !important;}.vc_custom_1537528756955{background-color: #f0f0f0 !important;}.vc_custom_1541000211782{background-image: url(http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-1.jpg?id=3791) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1538058666023{background-color: #f0f0f0 !important;}.vc_custom_1540995364489{background-image: url(http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-2.jpg?id=3793) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1536849658368{background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1540995393498{background-image: url(http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-2.jpg?id=3794) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>		<!--custom style-->
+<style type="text/css">
+	</style>	</head>
+	<body class="home page-template page-template-template-default-without-breadcrumbs page-template-template-default-without-breadcrumbs-php page page-id-3787 theme-medicenter woocommerce-no-js wpb-js-composer js-comp-ver-6.1 vc_responsive">
+		<div class="site-container fullwidth">
+							<div class="header-top-sidebar-container">
+					<div class="header-top-sidebar clearfix">
+									<div class="textwidget"><div style='padding: 17px 0;' class='clearfix'>
+<ul class='thin-list'>
+<li>
+<span class="header-icon template-location">Kolkata, West Bengal, India</span>
+</li>
+<li>
+<a href="tel:5102105225" class="header-icon template-phone">7595093227</a>
+</li>
+<li>
+<a href="mailto:contact@medicenter.com" class="header-icon template-mail">contact@medbay.com</a>
+</li>
+</ul>
+
+<div class="icons-list">
+
+
+</div>
+</div></div>
+							</div>
+				</div>
+							<!-- Header -->
+						<div class="header-container sticky">
+				<div class="header clearfix layout-1">
+										<div class="header-left">
+						<a href="http://quanticalabs.com/wp_themes/medicenter" title="MediCenter">
+														<img src="http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/images/header_logo.png" alt="logo" />
+																					<span class="logo">MedBay</span>
+													</a>
+						<a href="#" class="mobile-menu-switch vertical-align-cell">
+							<span class="line"></span>
+							<span class="line"></span>
+							<span class="line"></span>
+							<span class="line"></span>
+						</a>
+											</div>
+					<div class="menu-main-menu-container"><ul id="menu-main-menu" class="sf-menu header-right"><li id="menu-item-3834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3787 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-3834"><a href="http://quanticalabs.com/wp_themes/medicenter/" aria-current="page">HOME</a>
+<ul class="sub-menu">
+	<li id="menu-item-3835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3787 current_page_item menu-item-3835"><a href="http://quanticalabs.com/wp_themes/medicenter/" aria-current="page">Home Style 1</a></li>
+	<li id="menu-item-3852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3852"><a href="http://quanticalabs.com/wp_themes/medicenter/home-style-2/">Home Style 2</a></li>
+	
+</ul>
+</li>
+<li id="menu-item-3674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3674"><a >BLOG</a>
+<ul class="sub-menu">
+	<li id="menu-item-3614" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3614"><a href="http://quanticalabs.com/wp_themes/medicenter/blog/">Blog With Sidebar</a></li>
+	
+</ul>
+</li>
+
+<li id="menu-item-3657" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3657"><a href="http://quanticalabs.com/wp_themes/medicenter/contact/">CONTACT</a>
+
+</li>
+
+<li id="menu-item-3657" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3657"><a href="/login/">LOGIN</a>
+
+</li>
+
+<li id="menu-item-3657" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3657"><a href="/signup/">SIGNUP</a>
+
+</li>
+
+</ul></div>						
+											</div>
+			</div>
+					<!-- /Header --><div class="theme-page relative">
+	<div class="clearfix">
+		<div class="vc_row wpb_row vc_row-fluid full-width"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="wpb_revslider_element wpb_content_element mc-navigation">
+			<!-- START Home REVOLUTION SLIDER 6.2.2 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_2_1_wrapper" data-source="gallery" style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;max-width:">
+				<rs-module id="rev_slider_2_1" class=" rs-ov-hidden" style="display:none;" data-version="6.2.2">
+					<rs-slides>
+						<rs-slide data-key="rs-4" data-title="Slide" data-anim="ei:power3.inOut;eo:d;s:750;r:0;t:slidehorizontal;sl:d;" data-firstanim="t:fade;s:300;sl:7;">
+							<img src="//quanticalabs.com/wp_themes/medicenter/files/revslider/home/slider_01.jpg" title="slider_01.jpg" width="1920" height="670" class="rev-slidebg" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-2-slide-4-layer-3"
+								class="slider-subheading"
+								data-type="text"
+								data-color="#ffffff"
+								data-tsh="c:rgba(0,0,0,0.5);v:1px;"
+								data-xy="x:1px;y:240px;"
+								data-text="s:24;l:36;a:inherit;"
+								data-dim="w:100%;"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-layeronlimit="on"
+								data-frame_0="y:30px;tp:600;"
+								data-frame_1="tp:600;st:800;sp:1200;sR:800;"
+								data-frame_999="o:0;tp:600;e:none;st:w;sR:4000;"
+								style="z-index:9;font-family:Source Sans Pro;"
+							>For healthcare professionals and institutions.<br>
+Designed with detail in mind.
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-2-slide-4-layer-19"
+								class="slider-heading"
+								data-type="text"
+								data-color="#ffffff"
+								data-tsh="c:rgba(0,0,0,0.5);v:1px;"
+								data-xy="y:75px;"
+								data-text="s:60;l:70;fw:200;a:inherit;"
+								data-dim="w:100%;"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:30px;"
+								data-frame_1="st:500;sp:1200;"
+								data-frame_999="o:0;e:none;st:w;"
+								style="z-index:8;font-family:Source Sans Pro;"
+							>Modern. Elegant.<br>
+<strong><a  target="_top">MedBay</a></strong>
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-5" data-title="Slide" data-anim="ei:power3.inOut;eo:d;s:750;r:0;t:slidehorizontal;sl:d;">
+							<img src="//quanticalabs.com/wp_themes/medicenter/files/revslider/home/slider_02.jpg" title="slider_02.jpg" width="1920" height="670" class="rev-slidebg" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-2-slide-5-layer-1"
+								class="slider-heading"
+								data-type="text"
+								data-color="#ffffff"
+								data-tsh="c:rgba(0,0,0,0.5);v:1px;"
+								data-xy="y:75px;"
+								data-text="s:60;l:70;fw:200;a:inherit;"
+								data-dim="w:100%;"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:30px;tp:600;"
+								data-frame_1="tp:600;st:500;sp:1200;sR:500;"
+								data-frame_999="o:0;tp:600;e:none;st:w;sR:4300;"
+								style="z-index:8;font-family:Source Sans Pro;"
+							><strong>Show Your</strong> Schedule<br/>
+With <strong><a href="https://1.envato.market/medicenter-responsive-medical-wordpress-theme" target="_top">Timetable</a></strong>
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-2-slide-5-layer-3"
+								class="slider-subheading"
+								data-type="text"
+								data-color="#ffffff"
+								data-tsh="c:rgba(0,0,0,0.5);v:1px;"
+								data-xy="x:1px;y:240px;"
+								data-text="s:24;l:36;a:inherit;"
+								data-dim="w:100%;"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-layeronlimit="on"
+								data-frame_0="y:30px;tp:600;"
+								data-frame_1="tp:600;st:800;sp:1200;sR:800;"
+								data-frame_999="o:0;tp:600;e:none;st:w;sR:4000;"
+								style="z-index:9;font-family:Source Sans Pro;"
+							>Organize and visualize your week<br/>
+with build-in timetable.
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-6" data-title="Slide" data-anim="ei:power3.inOut;eo:d;s:750;r:0;t:slidehorizontal;sl:d;">
+							<img src="//quanticalabs.com/wp_themes/medicenter/files/revslider/home/slider_03.jpg" title="slider_03.jpg" width="1920" height="670" class="rev-slidebg" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-2-slide-6-layer-1"
+								class="slider-heading"
+								data-type="text"
+								data-color="#ffffff"
+								data-tsh="c:rgba(0,0,0,0.5);v:1px;"
+								data-xy="y:75px;"
+								data-text="s:60;l:70;fw:200;a:inherit;"
+								data-dim="w:100%;"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:30px;tp:600;"
+								data-frame_1="tp:600;st:500;sp:1200;sR:500;"
+								data-frame_999="o:0;tp:600;e:none;st:w;sR:4300;"
+								style="z-index:5;font-family:Source Sans Pro;"
+							><strong>The #1 Selling</strong><br/>
+<a href="https://1.envato.market/medicenter-responsive-medical-wordpress-theme" target="_top">Medical Theme</a>
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-2-slide-6-layer-3"
+								class="slider-subheading"
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-tsh="c:rgba(0,0,0,0.5);v:1px;"
+								data-xy="x:1px;y:240px;"
+								data-text="s:24;l:36;a:inherit;"
+								data-dim="w:100%;"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-layeronlimit="on"
+								data-frame_0="y:30px;tp:600;"
+								data-frame_1="tp:600;st:800;sp:1200;sR:800;"
+								data-frame_999="o:0;tp:600;e:none;st:w;sR:4000;"
+								style="z-index:6;font-family:Source Sans Pro;"
+							>Limitless possibilities with<br/>
+drag & drop page builder.
+							</rs-layer><!--
+-->						</rs-slide>
+					</rs-slides>
+					<rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>
+				</rs-module>
+				<script type="text/javascript">
+					setREVStartSize({c: 'rev_slider_2_1',rl:[1240,1024,778,480],el:[670],gw:[1230],gh:[670],type:'standard',justify:'',layout:'fullwidth',mh:"0"});
+					var	revapi2,
+						tpj;
+					jQuery(function() {
+						tpj = jQuery;
+						if(tpj("#rev_slider_2_1").revolution == undefined){
+							revslider_showDoubleJqueryError("#rev_slider_2_1");
+						}else{
+							revapi2 = tpj("#rev_slider_2_1").show().revolution({
+								jsFileLocation:"//quanticalabs.com/wp_themes/medicenter/wp-content/plugins/revslider/public/assets/js/",
+								duration:6000,
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:1230,
+								gridheight:670,
+								hideLayerAtLimit:463,
+								editorheight:"670,768,960,720",
+								responsiveLevels:"1240,1024,778,480",
+								disableProgressBar:"on",
+								stopAtSlide:1,
+								stopAfterLoops:0,
+								stopLoop:true,
+								navigation: {
+									mouseScrollNavigation:false,
+									onHoverStop:false,
+									touch: {
+										touchenabled:true,
+										touchOnDesktop:true
+									}
+								},
+								fallbacks: {
+									disableFocusListener:true,
+									allowHTML5AutoPlayOnAndroid:true
+								},
+							});
+						}
+
+					});
+				</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper">
+	<div class="wpb_widgetised_column wpb_content_element clearfix home-box-container-list for-home-slider">
+		<div class="wpb_wrapper">
+
+			<ul><li class="home-box-container clearfix animated-element animation-fadeIn duration-500">
+			<div class="home-box">
+				<h2>Emergency Case</h2>				<div class="news clearfix">
+										<div class="text">
+					If you need a doctor urgently outside of medbay opening hours, call emergency appointment number for emergency service. 					</div>
+										<a title="READ MORE" href="http://quanticalabs.com/wp_themes/medicenter/contact/" target=&quot;_blank&quot; class="mc-button more template-arrow-horizontal-1-after light">READ MORE</a>				</div>
+			</div>
+		</li>
+				<li class="home-box-container clearfix animated-element animation-slideRight duration-800 delay-250">
+			<div class="home-box">
+				<h2>Doctors Timetable</h2>				<div class="news clearfix">
+										<div class="text">
+					Here at medicenter we have individual doctor's lists. Click read more below to see services and current timetable for our doctors.					</div>
+										<a title="READ MORE" href="http://quanticalabs.com/wp_themes/medicenter/timetable/" class="mc-button more template-arrow-horizontal-1-after light">READ MORE</a>				</div>
+			</div>
+		</li>
+				<li class="home-box-container clearfix animated-element animation-slideRight200 duration-800 delay-500">
+			<div class="home-box">
+				<h2>Opening Hours</h2>				<div class="news clearfix">
+										<div class="text">
+					<div class="clearfix scrolling-controls"><div class="header-right">
+			<a href="#" id="scrolling-list-0_prev" class="scrolling-list-control-left template-arrow-horizontal-3"></a>
+			<a href="#" id="scrolling-list-0_next" class="scrolling-list-control-right template-arrow-horizontal-3"></a>
+		</div>
+	</div>
+	<div class="scrolling-list-wrapper"><div class="scrolling-list-fix-block"></div><ul class="scrolling-list scrolling-list-0 thin opening-hours clearfix">
+	<li class="clearfix">
+			<span>Monday - Thursday</span><div class="value">8.00 - 17.00</div></li>
+	<li class="clearfix">
+			<span>Friday</span><div class="value">9.00 - 18.00</div></li>
+	<li class="clearfix">
+			<span>Saturday</span><div class="value">9.30 - 17.30</div></li>
+	<li class="clearfix">
+			<span>Sunday</span><div class="value">9.30 - 15.00</div></li>
+</ul></div>					</div>
+														</div>
+			</div>
+		</li></ul>
+		</div>
+	</div>
+</div></div></div><div class="vc_row wpb_row vc_row-fluid page-margin-top-section"><div class="padding-right-30 wpb_column vc_column_container vc_col-sm-6"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   page-margin-top side-image">
+
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="320" height="460" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02.jpg" class="vc_single_image-img attachment-medicenter-vertical-image" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02.jpg 320w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-209x300.jpg 209w" sizes="(max-width: 320px) 100vw, 320px" /></div>
+		</figure>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_right">
+
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="320" height="460" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01.jpg" class="vc_single_image-img attachment-medicenter-vertical-image" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01.jpg 320w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-209x300.jpg 209w" sizes="(max-width: 320px) 100vw, 320px" /></div>
+		</figure>
+	</div>
+</div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="wpb_wrapper"><h3 class="box-header">Welcome to Medicenter</h3><h2 class="box-header large margin-top-30 no-border">Medicenter holds the privilage of being Chicago's first choice hospital</h2>
+	<div class="wpb_text_column wpb_content_element  large margin-top-10" >
+		<div class="wpb_wrapper">
+			<p>Since its founding we become an integral part of the city, advancing our mission of providing access to compassionate care to our communities. Today patients find care that combines world-class medicine with compassion.</p>
+
+		</div>
+	</div>
+<ul class="simple-list margin-top-15 clearfix"><li class="template-tick-2 clearfix">
+			<span>Medicenter is a people centered environment &#8211; which means you are at the center of everything we do and every decision we make.</span></li><li class="template-tick-2 clearfix">
+			<span>We are your partner for health, helping your live well by bringing the best in medicine and healthcare to your door.</span></li><li class="template-tick-2 clearfix">
+			<span>We provide fast, effective and affordable immediate care for non-life threatening illnesses. Most patients are seen, treated and released in about 60 minutes.</span></li></ul></div></div></div><div class="vc_row wpb_row vc_row-fluid align-center padding-top-57 padding-bottom-63 vc_custom_1534852698410 vc_row-has-fill page-margin-top-section full-width"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><h2><span class="button-label">In case of emergency call (510) 210-5225</span><a title="OR SEND US A MESSAGE" href="http://contact" class="mc-button more dark-color large template-arrow-horizontal-1-after">OR SEND US A MESSAGE</a></h2>
+</div></div></div><div class="vc_row wpb_row vc_row-fluid counters-group padding-top-200 padding-bottom-193 vc_custom_1540998747342 vc_row-has-fill full-width mc-parallax mc-overlay"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="counter-box features-medical-bed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124px" height="142px" viewBox="0 -2 122 142"><path class="counter-box-path animated-element" stroke="#FFF" d="M 0,103.5 0,34.5 60,0 120,34.5 120,103.5 60,138Z" fill="none" stroke-width="2" data-animation-start="390"></path></svg><span class="number animated-element" data-value="20 537" data-animation-start="230"></span><p>HOSPITALIZATIONS</p></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="counter-box features-dna"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124px" height="142px" viewBox="0 -2 122 142"><path class="counter-box-path animated-element" stroke="#FFF" d="M 0,103.5 0,34.5 60,0 120,34.5 120,103.5 60,138Z" fill="none" stroke-width="2" data-animation-start="390"></path></svg><span class="number animated-element" data-value="16 205" data-animation-start="230"></span><p>AMBULATORY CASES</p></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="counter-box features-people align-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124px" height="142px" viewBox="0 -2 122 142"><path class="counter-box-path animated-element" stroke="#FFF" d="M 0,103.5 0,34.5 60,0 120,34.5 120,103.5 60,138Z" fill="none" stroke-width="2" data-animation-start="390"></path></svg><span class="number animated-element" data-value="10 852" data-animation-start="230"></span><p>EMPLOYED DOCTORS</p></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="counter-box features-lab"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124px" height="142px" viewBox="0 -2 122 142"><path class="counter-box-path animated-element" stroke="#FFF" d="M 0,103.5 0,34.5 60,0 120,34.5 120,103.5 60,138Z" fill="none" stroke-width="2" data-animation-start="390"></path></svg><span class="number animated-element" data-value="12 460" data-animation-start="230"></span><p>LABORATORY TESTS</p></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid page-margin-top-section"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="wpb_wrapper"><h2 class="box-header large no-border">We Value Your Family's<br />
+Health and Your Time</h2></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element  large padding-0" >
+		<div class="wpb_wrapper">
+			<p>Welcome to Medicenter a full-service diagnostic center and medical care clinic located on the north side of Chicago in the historic neighborhood. We provide fast effective and affordable treatment for non-life threatening illnesses and injuries that need attention right away by certified specialists.</p>
+
+		</div>
+	</div>
+</div></div></div><div class="vc_row wpb_row vc_row-fluid page-margin-top-section"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><ul class="services-list clearfix"><li class="vc_row wpb_row vc_row-fluid"><ul><li><img width="480" height="320" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-5.jpg" class="attachment-medium-thumb size-medium-thumb wp-post-image" alt="HEALTHCARE CENTER" title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-5.jpg 480w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-5-300x200.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-5-390x260.jpg 390w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-5-285x190.jpg 285w" sizes="(max-width: 480px) 100vw, 480px" /><div class="service-details"><h4 class="box-header"><a href="http://quanticalabs.com/wp_themes/medicenter/services/healthcare-center/" title="HEALTHCARE CENTER">HEALTHCARE CENTER</a></h4><p>Our goal is to provide a patient-centered medical home for all patients</p>
+</div></li><li><img width="480" height="320" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-5.jpg" class="attachment-medium-thumb size-medium-thumb wp-post-image" alt="IMMEDIATE CARE" title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-5.jpg 480w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-5-300x200.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-5-390x260.jpg 390w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-5-285x190.jpg 285w" sizes="(max-width: 480px) 100vw, 480px" /><div class="service-details"><h4 class="box-header"><a href="http://quanticalabs.com/wp_themes/medicenter/services/immediate-care/" title="IMMEDIATE CARE">IMMEDIATE CARE</a></h4><p>Effective and affordable treatment for non-life threatening illnesses</p>
+</div></li><li><img width="480" height="320" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_03-2.jpg" class="attachment-medium-thumb size-medium-thumb wp-post-image" alt="DIAGNOSTIC CENTER" title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_03-2.jpg 480w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_03-2-300x200.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_03-2-390x260.jpg 390w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_03-2-285x190.jpg 285w" sizes="(max-width: 480px) 100vw, 480px" /><div class="service-details"><h4 class="box-header"><a href="http://quanticalabs.com/wp_themes/medicenter/services/diagnostic-center/" title="DIAGNOSTIC CENTER">DIAGNOSTIC CENTER</a></h4><p>Offers a wide array of reliable lab and diagnostic imaging services</p>
+</div></li></ul></li></ul></div></div></div><div class="vc_row wpb_row vc_row-fluid align-center padding-top-63 padding-bottom-13"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><a title="SERVICES LIST" href="http://services" class="mc-button more light-color  single-button">SERVICES LIST</a>
+</div></div></div><div class="vc_row wpb_row vc_row-fluid flex-box vc_custom_1535723622030 vc_row-has-fill page-margin-top-section full-width"><div class="wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill vc_custom_1540995364489"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   flex-hide">
+
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="960" height="750" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-2.jpg" class="vc_single_image-img attachment-large-thumb" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-2.jpg 960w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-2-300x234.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-2-768x600.jpg 768w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-2-600x469.jpg 600w" sizes="(max-width: 960px) 100vw, 960px" /></div>
+		</figure>
+	</div>
+</div></div><div class="padding-bottom-128 column-limited wpb_column vc_column_container vc_col-sm-6"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid padding-left-100"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h3 class="box-header margin-top-92">Family Birth Center</h3><h2 class="box-header large margin-top-30 no-border">Leading Edge Care for Mom and Baby</h2>
+	<div class="wpb_text_column wpb_content_element  large margin-top-10" >
+		<div class="wpb_wrapper">
+			<p>The Family Birth Center at Medicenter is a unique, full-service facility offering moms-to-be leading edge care in a comfortable, nurturing setting. We offer care through delivery and post-natal treatment to ensure you a happy and the best possible birthing experience.</p>
+
+		</div>
+	</div>
+<div class="vc_progress_bar wpb_content_element  page-margin-top vc_progress-bar-color-bar_grey" ><div class="vc_general vc_single_bar"><small class="vc_label">Remember the stay well <span class="vc_label_units">92%</span></small><span class="vc_bar " data-percentage-value="92" data-value="92"></span></div><div class="vc_general vc_single_bar"><small class="vc_label">Rate the kitchen well <span class="vc_label_units">85%</span></small><span class="vc_bar " data-percentage-value="85" data-value="85"></span></div><div class="vc_general vc_single_bar"><small class="vc_label">Benefited from classes <span class="vc_label_units">65%</span></small><span class="vc_bar " data-percentage-value="65" data-value="65"></span></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid flex-box vc_custom_1536922373069 vc_row-has-fill full-width"><div class="padding-bottom-128 column-limited wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill vc_custom_1536849658368"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid padding-right-100"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h3 class="box-header margin-top-92">Learn why is it worth it</h3><h2 class="box-header large margin-top-30 no-border">Medicenter Immediate Care Facilities Provide Quick Care and Relief</h2>
+	<div class="wpb_text_column wpb_content_element  large margin-top-10" >
+		<div class="wpb_wrapper">
+			<p>No appointment needed, most patients are seen, treated and released in about 60 minutes. Certified and experienced MD physicians not nurses and on site diagnostic tests with lab.</p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid padding-right-100"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><ul class="simple-list margin-top-15 clearfix"><li class="template-tick-2 clearfix">
+			<span>Behavioral health</span></li><li class="template-tick-2 clearfix">
+			<span>Earaches of infections</span></li><li class="template-tick-2 clearfix">
+			<span>Broken bones</span></li><li class="template-tick-2 clearfix">
+			<span>Minor burns</span></li></ul></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><ul class="simple-list margin-top-15 clearfix"><li class="template-tick-2 clearfix">
+			<span>Minor cuts and wounds</span></li><li class="template-tick-2 clearfix">
+			<span>Urinary tract infections</span></li><li class="template-tick-2 clearfix">
+			<span>Upset stomach</span></li><li class="template-tick-2 clearfix">
+			<span>Flue and more&#8230;</span></li></ul></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill vc_custom_1540995393498"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   flex-hide">
+
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="960" height="750" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-2.jpg" class="vc_single_image-img attachment-large-thumb" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-2.jpg 960w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-2-300x234.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-2-768x600.jpg 768w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-2-600x469.jpg 600w" sizes="(max-width: 960px) 100vw, 960px" /></div>
+		</figure>
+	</div>
+<a href="http://www.youtube.com/watch?v=AivyFZXT2ek" class="icon-single hexagon fancybox"><span class="features-play"></span></a></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1537528756955 vc_row-has-fill full-width"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid margin-bottom-50 page-margin-top"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="our-clients-list-container">
+					<ul class="our-clients-list"><li class="vertical-align"><div class="our-clients-item-container"><div class="vertical-align-cell"><a href="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_01.png" class="fancybox"><img width="300" height="200" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_01.png" class="attachment-full size-full" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_01.png 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_01-285x190.png 285w" sizes="(max-width: 300px) 100vw, 300px" /></a></div></div></li><li class="vertical-align"><div class="our-clients-item-container"><div class="vertical-align-cell"><a href="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_02.png" class="fancybox"><img width="300" height="200" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_02.png" class="attachment-full size-full" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_02.png 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_02-285x190.png 285w" sizes="(max-width: 300px) 100vw, 300px" /></a></div></div></li><li class="vertical-align"><div class="our-clients-item-container"><div class="vertical-align-cell"><a href="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_03.png" class="fancybox"><img width="300" height="200" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_03.png" class="attachment-full size-full" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_03.png 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_03-285x190.png 285w" sizes="(max-width: 300px) 100vw, 300px" /></a></div></div></li><li class="vertical-align"><div class="our-clients-item-container"><div class="vertical-align-cell"><a href="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_04.png" class="fancybox"><img width="300" height="200" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_04.png" class="attachment-full size-full" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_04.png 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_04-285x190.png 285w" sizes="(max-width: 300px) 100vw, 300px" /></a></div></div></li><li class="vertical-align"><div class="our-clients-item-container"><div class="vertical-align-cell"><a href="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_05.png" class="fancybox"><img width="300" height="200" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_05.png" class="attachment-full size-full" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_05.png 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/logo_05-285x190.png 285w" sizes="(max-width: 300px) 100vw, 300px" /></a></div></div></li></ul></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid page-margin-top-section"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><h2 class="box-header large align-center">Meet the Team</h2>
+	<div class="wpb_text_column wpb_content_element  large align-center margin-top-20" >
+		<div class="wpb_wrapper">
+			<p>Is it the people who make Medicenter what it is and we are extremely proud of the achievements of our<br />
+staff. We all work together to help our patients through recovery, providing the best possible care.</p>
+
+		</div>
+	</div>
+<div class="clearfix scrolling-controls">
+				<div class="header-left"></div>
+				<div class="header-right"><a href="#" id="carousel_prev" class="scrolling-list-control-left template-arrow-horizontal-3"></a><a href="#" id="carousel_next" class="scrolling-list-control-right template-arrow-horizontal-3"></a></div></div>
+				<ul class="mc-gallery gallery-4-columns dm_carousel horizontal-carousel carousel id-carousel autoplay-0 pause_on_hover-1 scroll-1 effect-scroll easing-swing duration-500"><li class="gallery-box gallery-box-1 hover-icons-off" id="gallery-item-ann-blyumin-prof"><img width="285" height="190" src="http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_11-2-285x190.jpg" class="mc-preload wp-post-image" alt="Ann Blyumin, Prof." title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_11-2-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_11-2-670x446.jpg 670w, http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_11-2-600x400.jpg 600w, http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_11-2-390x260.jpg 390w" sizes="(max-width: 285px) 100vw, 285px" />
+						<div class="description">
+							<h4>Ann Blyumin, Prof.</h4>
+							<h5>Pediatric Clinic</h5>
+						</div><div class="item-details"><p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.Duis mollis, est non commodo luctus.</p>
+</div><ul class="social-icons clearfix"><li><a class="social-facebook" href="http://facebook.com/QuanticaLabs" target="_blank" title="">&nbsp;</a></li><li><a class="social-email" href="mailto:medicenter@mail.com" title="">&nbsp;</a></li><li><a class="social-twitter" href="https://twitter.com/QuanticaLabs" target="_blank" title="">&nbsp;</a></li><li><a class="social-envato" href="https://1.envato.market/quanticalabs-portfolio" target="_blank" title="">&nbsp;</a></li></ul>
+						<ul class="controls">
+							<li>
+								<a href="http://quanticalabs.com/wp_themes/medicenter/doctors/ann-blyumin-prof/" class="template-menu-2 open-details"></a>
+							</li><li><a href="http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_11-2.jpg" class="template-plus-2 fancybox open-lightbox" rel="mcgallery[loop]"></a>
+					</li></ul></li><li class="gallery-box gallery-box-2 hover-icons-off" id="gallery-item-clare-mitchell-prof"><img width="285" height="190" src="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_02-2-285x190.jpg" class="mc-preload wp-post-image" alt="Clare Mitchell, Prof." title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_02-2-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_02-2-670x446.jpg 670w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_02-2-600x400.jpg 600w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_02-2-390x260.jpg 390w" sizes="(max-width: 285px) 100vw, 285px" />
+						<div class="description">
+							<h4>Clare Mitchell, Prof.</h4>
+							<h5>Pediatric Clinic</h5>
+						</div><div class="item-details"><p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.Duis mollis, est non commodo luctus. </p>
+</div><ul class="social-icons clearfix"><li><a class="social-twitter" href="http://twitter.com/QuanticaLabs" target="_blank" title="">&nbsp;</a></li><li><a class="social-email" href="mailto:medicenter@mail.com" title="">&nbsp;</a></li><li><a class="social-behance" href="https://www.behance.net/quanticalabs" target="_blank" title="">&nbsp;</a></li></ul>
+						<ul class="controls">
+							<li>
+								<a href="http://quanticalabs.com/wp_themes/medicenter/doctors/clare-mitchell-prof/" class="template-menu-2 open-details"></a>
+							</li><li><a href="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_02-2.jpg" class="template-plus-2 fancybox open-lightbox" rel="mcgallery[loop]"></a>
+					</li></ul></li><li class="gallery-box gallery-box-3 hover-icons-off" id="gallery-item-earlene-milone-prof"><img width="285" height="190" src="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_03-2-285x190.jpg" class="mc-preload wp-post-image" alt="Earlene Milone, Prof." title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_03-2-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_03-2-670x446.jpg 670w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_03-2-600x400.jpg 600w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_03-2-390x260.jpg 390w" sizes="(max-width: 285px) 100vw, 285px" />
+						<div class="description">
+							<h4>Earlene Milone, Prof.</h4>
+							<h5>Laryngological Clinic</h5>
+						</div><div class="item-details"><p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.Duis mollis, est non commodo luctus. </p>
+</div><ul class="social-icons clearfix"><li><a class="social-instagram" href="#" title="">&nbsp;</a></li><li><a class="social-skype" href="#" title="">&nbsp;</a></li></ul>
+						<ul class="controls">
+							<li>
+								<a href="http://quanticalabs.com/wp_themes/medicenter/doctors/earlene-milone-prof/" class="template-menu-2 open-details"></a>
+							</li><li><a href="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_03-2.jpg" class="template-plus-2 fancybox open-lightbox" rel="mcgallery[loop]"></a>
+					</li></ul></li><li class="gallery-box gallery-box-4 hover-icons-off" id="gallery-item-greta-midler"><img width="285" height="190" src="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_05-2-285x190.jpg" class="mc-preload wp-post-image" alt="Greta Midler" title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_05-2-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_05-2-670x446.jpg 670w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_05-2-600x400.jpg 600w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_05-2-390x260.jpg 390w" sizes="(max-width: 285px) 100vw, 285px" />
+						<div class="description">
+							<h4>Greta Midler</h4>
+							<h5>Management</h5>
+						</div><div class="item-details"><p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.Duis mollis, est non commodo luctus.</p>
+</div><ul class="social-icons clearfix"><li><a class="social-facebook" href="http://facebook.com/QuanticaLabs" target="_blank" title="">&nbsp;</a></li><li><a class="social-envato" href="https://1.envato.market/quanticalabs-portfolio" target="_blank" title="">&nbsp;</a></li><li><a class="social-email" href="mailto:medicenter@mail.com" title="">&nbsp;</a></li></ul>
+						<ul class="controls">
+							<li>
+								<a href="http://quanticalabs.com/wp_themes/medicenter/doctors/greta-midler/" class="template-menu-2 open-details"></a>
+							</li><li><a href="http://quanticalabs.com?iframe=true" class="template-plus-2 fancybox-iframe open-iframe-lightbox" rel="mcgallery[loop]"></a>
+					</li></ul></li><li class="gallery-box gallery-box-5 hover-icons-off" id="gallery-item-john-d-tom"><img width="285" height="190" src="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2-285x190.jpg" class="mc-preload wp-post-image" alt="John D. Tom" title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2-670x446.jpg 670w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2-600x400.jpg 600w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2-390x260.jpg 390w" sizes="(max-width: 285px) 100vw, 285px" />
+						<div class="description">
+							<h4>John D. Tom</h4>
+							<h5>Outpatient Surgery</h5>
+						</div><div class="item-details"><p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.Duis mollis, est non commodo luctus. </p>
+</div><ul class="social-icons clearfix"><li><a class="social-youtube" href="https://www.youtube.com/user/quanticalabs" target="_blank" title="">&nbsp;</a></li><li><a class="social-tumblr" href="#" title="">&nbsp;</a></li><li><a class="social-soundcloud" href="#" title="">&nbsp;</a></li></ul>
+						<ul class="controls">
+							<li>
+								<a href="http://quanticalabs.com/wp_themes/medicenter/doctors/john-d-tom/" class="template-menu-2 open-details"></a>
+							</li><li><a href="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2.jpg" class="template-plus-2 fancybox open-lightbox" rel="mcgallery[loop]"></a>
+					</li></ul></li><li class="gallery-box gallery-box-6 hover-icons-off" id="gallery-item-norma-blueman"><img width="285" height="190" src="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_06-2-285x190.jpg" class="mc-preload wp-post-image" alt="Norma Blueman" title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_06-2-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_06-2-670x446.jpg 670w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_06-2-600x400.jpg 600w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_06-2-390x260.jpg 390w" sizes="(max-width: 285px) 100vw, 285px" />
+						<div class="description">
+							<h4>Norma Blueman</h4>
+							<h5>Dental Clinic</h5>
+						</div><div class="item-details"><p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.Duis mollis, est non commodo luctus. </p>
+</div><ul class="social-icons clearfix"><li><a class="social-youtube" href="https://www.youtube.com/user/quanticalabs" target="_blank" title="">&nbsp;</a></li><li><a class="social-houzz" href="#" title="">&nbsp;</a></li><li><a class="social-reddit" href="#" title="">&nbsp;</a></li></ul>
+						<ul class="controls">
+							<li>
+								<a href="http://quanticalabs.com/wp_themes/medicenter/doctors/norma-blueman/" class="template-menu-2 open-details"></a>
+							</li><li><a href="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_06-2.jpg" class="template-plus-2 fancybox open-lightbox" rel="mcgallery[loop]"></a>
+					</li></ul></li><li class="gallery-box gallery-box-7 hover-icons-off" id="gallery-item-robert-brown-prof"><img width="285" height="190" src="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_01-2-285x190.jpg" class="mc-preload wp-post-image" alt="Robert Brown, Prof." title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_01-2-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_01-2-670x446.jpg 670w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_01-2-600x400.jpg 600w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_01-2-390x260.jpg 390w" sizes="(max-width: 285px) 100vw, 285px" />
+						<div class="description">
+							<h4>Robert Brown, Prof.</h4>
+							<h5>Gynaecological Clinic</h5>
+						</div><div class="item-details"><p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.Duis mollis, est non commodo luctus. </p>
+</div><ul class="social-icons clearfix"><li><a class="social-facebook" href="http://facebook.com/QuanticaLabs" target="_blank" title="">&nbsp;</a></li><li><a class="social-google-plus" href="#" title="">&nbsp;</a></li><li><a class="social-linkedin" href="#" title="">&nbsp;</a></li><li><a class="social-xing" href="#" title="">&nbsp;</a></li></ul>
+						<ul class="controls">
+							<li>
+								<a href="http://quanticalabs.com/wp_themes/medicenter/doctors/robert-brown-prof/" class="template-menu-2 open-details"></a>
+							</li><li><a href="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_01-2.jpg" class="template-plus-2 fancybox open-lightbox" rel="mcgallery[loop]"></a>
+					</li></ul></li><li class="gallery-box gallery-box-8 hover-icons-off" id="gallery-item-robert-van-hex"><img width="285" height="190" src="http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_10-2-285x190.jpg" class="mc-preload wp-post-image" alt="Robert van Hex" title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_10-2-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_10-2-670x446.jpg 670w, http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_10-2-600x400.jpg 600w, http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_10-2-390x260.jpg 390w" sizes="(max-width: 285px) 100vw, 285px" />
+						<div class="description">
+							<h4>Robert van Hex</h4>
+							<h5>Outpatient Rehabilitation</h5>
+						</div><div class="item-details"><p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.Duis mollis, est non commodo luctus. </p>
+</div><ul class="social-icons clearfix"><li><a class="social-facebook" href="http://facebook.com/QuanticaLabs" target="_blank" title="">&nbsp;</a></li><li><a class="social-deviantart" href="#" title="">&nbsp;</a></li><li><a class="social-vimeo" href="#" title="">&nbsp;</a></li></ul>
+						<ul class="controls">
+							<li>
+								<a href="http://quanticalabs.com/wp_themes/medicenter/doctors/robert-van-hex/" class="template-menu-2 open-details"></a>
+							</li><li><a href="http://quanticalabs.com/wp_themes/medicenter/files/2012/02/image_10-2.jpg" class="template-plus-2 fancybox open-lightbox" rel="mcgallery[loop]"></a>
+					</li></ul></li><li class="gallery-box gallery-box-9 hover-icons-off" id="gallery-item-sue-collins"><img width="285" height="190" src="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_04-2-285x190.jpg" class="mc-preload wp-post-image" alt="Sue Collins" title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_04-2-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_04-2-670x446.jpg 670w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_04-2-600x400.jpg 600w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_04-2-390x260.jpg 390w" sizes="(max-width: 285px) 100vw, 285px" />
+						<div class="description">
+							<h4>Sue Collins</h4>
+							<h5>Ophthalmology Clinic</h5>
+						</div><div class="item-details"><p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.Duis mollis, est non commodo luctus. </p>
+</div><ul class="social-icons clearfix"><li><a class="social-tumblr" href="#" title="">&nbsp;</a></li><li><a class="social-xing" href="#" title="">&nbsp;</a></li></ul>
+						<ul class="controls">
+							<li>
+								<a href="http://quanticalabs.com/wp_themes/medicenter/doctors/sue-collins/" class="template-menu-2 open-details"></a>
+							</li><li><a href="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_04-2.jpg" class="template-plus-2 fancybox open-lightbox" rel="mcgallery[loop]"></a>
+					</li></ul></li><li class="gallery-box gallery-box-10 hover-icons-off" id="gallery-item-tim-duncan"><img width="285" height="190" src="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2-285x190.jpg" class="mc-preload wp-post-image" alt="Tim Duncan" title="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2-670x446.jpg 670w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2-600x400.jpg 600w, http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2-390x260.jpg 390w" sizes="(max-width: 285px) 100vw, 285px" />
+						<div class="description">
+							<h4>Tim Duncan</h4>
+							<h5>Gynaecological Clinic</h5>
+						</div><div class="item-details"><p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.Duis mollis, est non commodo luctus. </p>
+</div><ul class="social-icons clearfix"><li><a class="social-facebook" href="http://facebook.com/QuanticaLabs" target="_blank" title="">&nbsp;</a></li><li><a class="social-linkedin" href="#" title="">&nbsp;</a></li><li><a class="social-skype" href="#" title="">&nbsp;</a></li></ul>
+						<ul class="controls">
+							<li>
+								<a href="http://quanticalabs.com/wp_themes/medicenter/doctors/tim-duncan/" class="template-menu-2 open-details"></a>
+							</li><li><a href="http://quanticalabs.com/wp_themes/medicenter/files/2017/01/image_08-2.jpg" class="template-plus-2 fancybox open-lightbox" rel="mcgallery[loop]"></a>
+					</li></ul></li></ul></div></div></div><div class="vc_row wpb_row vc_row-fluid padding-top-100 padding-bottom-100 vc_custom_1541000211782 vc_row-has-fill page-margin-top-section full-width mc-parallax mc-overlay"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="clearfix scrolling-controls white">
+		<div class="header-left"></div>
+		<div class="header-right"><a href="#" id="testimonials_prev" class="scrolling-list-control-left template-arrow-horizontal-3""></a><a href="#" id="testimonials_next" class="scrolling-list-control-right template-arrow-horizontal-3"></a></div></div>
+		<ul class="columns full-width horizontal-carousel testimonials testimonials id-testimonials autoplay-0 pause_on_hover-1 scroll-1 effect-scroll easing-swing duration-500 testimonials-full-width white"><li class="wpb_column vc_column_container vc_col-sm-12 template-quote-2">
+				<h3 class="sentence">I actually felt as if I was staying at a hotel of good reputation. Everyone was extremely friendly amd professional. This was the cleanest medical establishment I've ever been in.</h3>
+				<div class="clearfix"><span class="sentence-author">John Marco</span></div>
+			</li><li class="wpb_column vc_column_container vc_col-sm-12 template-quote-2">
+				<h3 class="sentence">Prior to my stay at Medicenter, I was aware of their stellar reputation and multiple friends commented about how lucky I was to have my surgery scheduled there. As a result my expectations were high and yet the kind and professional staff surpassed them.</h3>
+				<div class="clearfix"><span class="sentence-author">Marilu Henner</span></div>
+			</li><li class="wpb_column vc_column_container vc_col-sm-12 template-quote-2">
+				<h3 class="sentence">I was very pleased with my stay at Medicenter. The care that I was given by the nursing staff was as if I was one of their family members.</h3>
+				<div class="clearfix"><span class="sentence-author">Adam Lambda</span></div>
+			</li></ul></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1538058666023 vc_row-has-fill full-width"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="clearfix tabs type-big" data-interval="0">
+			<ul class="tabs-navigation clearfix"><li><a href="#our-history" class="">Our History</a></li><li><a href="#technology" class="">Technology</a></li><li><a href="#the-benefits" class="">The Benefits</a></li></ul>
+
+
+			<div id="our-history" class="wpb_tab">
+				<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="padding-right-30 wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   side-image-static">
+
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="390" height="260" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-390x260.jpg" class="vc_single_image-img attachment-medicenter-gallery-thumb-type-1" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-390x260.jpg 390w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-300x200.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09.jpg 480w" sizes="(max-width: 390px) 100vw, 390px" /></div>
+		</figure>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_right   margin-top-70 side-image">
+
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="390" height="260" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-3.jpg" class="vc_single_image-img attachment-medicenter-gallery-thumb-type-1" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-3.jpg 390w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-3-300x200.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_02-3-285x190.jpg 285w" sizes="(max-width: 390px) 100vw, 390px" /></div>
+		</figure>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><h3 class="box-header">Our story</h3><h2 class="box-header large margin-top-30 no-border">Care and Relief</h2>
+	<div class="wpb_text_column wpb_content_element  large margin-top-10" >
+		<div class="wpb_wrapper">
+			<p>No appointment needed, most patients are seen, treated and released in about 60 minutes. Certified and experienced MD physicans not nurses and on site diagnostic tests with lab.</p>
+
+		</div>
+	</div>
+<a title="LEARN MORE" href="http://medical-care" class="mc-button more light-color large template-arrow-horizontal-1-after margin-right-20 margin-top-20">LEARN MORE</a>
+<a title="TIMETABLE" href="http://timetable" class="mc-button more light large template-arrow-horizontal-1-after margin-top-20">TIMETABLE</a>
+</div></div></div></div>
+			</div>
+			<div id="technology" class="wpb_tab">
+				<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="padding-right-30 wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   side-image-static">
+
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="390" height="260" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-3-390x260.jpg" class="vc_single_image-img attachment-medicenter-gallery-thumb-type-1" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-3-390x260.jpg 390w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-3-300x200.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-3-480x320.jpg 480w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-3-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-3.jpg 600w" sizes="(max-width: 390px) 100vw, 390px" /></div>
+		</figure>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_right   margin-top-70 side-image">
+
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="390" height="260" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-390x260.jpg" class="vc_single_image-img attachment-medicenter-gallery-thumb-type-1" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-390x260.jpg 390w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-300x200.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09.jpg 480w" sizes="(max-width: 390px) 100vw, 390px" /></div>
+		</figure>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><h3 class="box-header">Technology</h3><h2 class="box-header large margin-top-30 no-border">Licensed Professionals</h2>
+	<div class="wpb_text_column wpb_content_element  large margin-top-10" >
+		<div class="wpb_wrapper">
+			<p>Urgent care physicians and nurses offer high-quanlity care. They are licensed and recognized as reputable members of the healthcare industry.</p>
+
+		</div>
+	</div>
+<a title="LEARN MORE" href="http://medical-care" class="mc-button more light-color large template-arrow-horizontal-1-after margin-right-20 margin-top-20">LEARN MORE</a>
+<a title="TIMETABLE" href="http://timetable" class="mc-button more light large template-arrow-horizontal-1-after margin-top-20">TIMETABLE</a>
+</div></div></div></div>
+			</div>
+			<div id="the-benefits" class="wpb_tab">
+				<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="padding-right-30 wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   side-image-static">
+
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="390" height="260" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-390x260.jpg" class="vc_single_image-img attachment-medicenter-gallery-thumb-type-1" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-390x260.jpg 390w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-300x200.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_09.jpg 480w" sizes="(max-width: 390px) 100vw, 390px" /></div>
+		</figure>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_right   margin-top-70 side-image">
+
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="390" height="260" src="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_05-390x260.jpg" class="vc_single_image-img attachment-medicenter-gallery-thumb-type-1" alt="" srcset="http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_05-390x260.jpg 390w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_05-300x200.jpg 300w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_05-285x190.jpg 285w, http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_05.jpg 480w" sizes="(max-width: 390px) 100vw, 390px" /></div>
+		</figure>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><h3 class="box-header">The Benefits</h3><h2 class="box-header large margin-top-30 no-border">Cost Effective</h2>
+	<div class="wpb_text_column wpb_content_element  large margin-top-10" >
+		<div class="wpb_wrapper">
+			<p>The cost of seeing a physician at a medical immediate care facility will be much more affordable than seeing a physician in an emergency room.</p>
+
+		</div>
+	</div>
+<a title="LEARN MORE" href="http://medical-care" class="mc-button more light-color large template-arrow-horizontal-1-after margin-right-20 margin-top-20">LEARN MORE</a>
+<a title="TIMETABLE" href="http://timetable" class="mc-button more light large template-arrow-horizontal-1-after margin-top-20">TIMETABLE</a>
+</div></div></div></div>
+			</div>
+		</div></div></div></div><div class="vc_row wpb_row vc_row-fluid padding-top-89 full-width"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 class="box-header large align-center">Why Choose Us</h2>
+	<div class="wpb_text_column wpb_content_element  large margin-top-20 align-center" >
+		<div class="wpb_wrapper">
+			<p>It is the people who make Medicenter what it is and we are extremely proud of the archievements of our<br />
+staff. We all work together to help our patients through recovery, providing the best possible care.</p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid page-margin-top"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><ul class="clearfix mc-features mc-features-large mc-features-style-default"><li class="item-content clearfix">
+				<a class="hexagon animated-element animation-scale" href="http://quanticalabs.com/wp_themes/medicenter/features/blood-clotting-disorder/" title="Blood clotting disorder"><span class="features-dentist"></span></a><div class="text"><h3><a href="http://quanticalabs.com/wp_themes/medicenter/features/blood-clotting-disorder/"  title="Blood clotting disorder">Blood clotting disorder</a></h3><p>Donec ipsum diam, pretium mollis dapibus risus. Nullam dolor nibh pulvinar at interdum eget.</p>
+</div>
+			</li><li class="item-content clearfix">
+				<a class="hexagon animated-element animation-scale" href="http://quanticalabs.com/wp_themes/medicenter/features/generics-strategies/" title="Generics strategies"><span class="features-medical-scissors"></span></a><div class="text"><h3><a href="http://quanticalabs.com/wp_themes/medicenter/features/generics-strategies/"  title="Generics strategies">Generics strategies</a></h3><p>Donec ipsum diam, pretium mollis dapibus risus. Nullam dolor nibh pulvinar at interdum eget.</p>
+</div>
+			</li></ul></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><ul class="clearfix mc-features mc-features-large mc-features-style-default"><li class="item-content clearfix">
+				<a class="hexagon animated-element animation-scale" href="http://quanticalabs.com/wp_themes/medicenter/features/wound-healing-genes/" title="Wound healing genes"><span class="features-doctor"></span></a><div class="text"><h3><a href="http://quanticalabs.com/wp_themes/medicenter/features/wound-healing-genes/"  title="Wound healing genes">Wound healing genes</a></h3><p>Donec ipsum diam, pretium mollis dapibus risus. Nullam dolor nibh pulvinar at interdum eget.</p>
+</div>
+			</li><li class="item-content clearfix">
+				<a class="hexagon animated-element animation-scale" href="http://quanticalabs.com/wp_themes/medicenter/features/springtime-allergies/" title="Springtime allergies"><span class="features-leaf"></span></a><div class="text"><h3><a href="http://quanticalabs.com/wp_themes/medicenter/features/springtime-allergies/"  title="Springtime allergies">Springtime allergies</a></h3><p>Donec ipsum diam, pretium mollis dapibus risus. Nullam dolor nibh pulvinar at interdum eget.</p>
+</div>
+			</li></ul></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><ul class="clearfix mc-features mc-features-large mc-features-style-default"><li class="item-content clearfix">
+				<a class="hexagon animated-element animation-scale" href="http://quanticalabs.com/wp_themes/medicenter/features/studies-of-genetic/" title="Studies of genetic"><span class="features-document"></span></a><div class="text"><h3><a href="http://quanticalabs.com/wp_themes/medicenter/features/studies-of-genetic/"  title="Studies of genetic">Studies of genetic</a></h3><p>Donec ipsum diam, pretium mollis dapibus risus. Nullam dolor nibh pulvinar at interdum eget.</p>
+</div>
+			</li><li class="item-content clearfix">
+				<a class="hexagon animated-element animation-scale" href="http://quanticalabs.com/wp_themes/medicenter/features/muscle-fitness/" title="Muscle fitness"><span class="features-ear"></span></a><div class="text"><h3><a href="http://quanticalabs.com/wp_themes/medicenter/features/muscle-fitness/"  title="Muscle fitness">Muscle fitness</a></h3><p>Donec ipsum diam, pretium mollis dapibus risus. Nullam dolor nibh pulvinar at interdum eget.</p>
+</div>
+			</li></ul></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid page-margin-top-section"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="wpb_wrapper"><div class="announcement clearfix vertical-align-table style-2">
+					<ul class="vertical-align">
+						<li class="vertical-align-cell"><h2>In Case of Emergency Call (510) 210-5225</h2><p>Please remember we care about your privacy.</p>
+</li><li class="vertical-align-cell">
+						<a title="OR SEND US A MESSAGE" href="contact" class="more mc-button dark-color large template-arrow-horizontal-1-after">OR SEND US A MESSAGE</a>
+					</li></ul>
+			</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="wpb_wrapper"><div class="announcement clearfix vertical-align-table style-2 mc-background" style="background-image: url(http://quanticalabs.com/wp_themes/medicenter/files/2018/10/image_01-4.jpg);">
+					<ul class="vertical-align">
+						<li class="vertical-align-cell"><h2>2702 Memory Lane Chicago, IL 60605</h2><p>Check duty hours of doctors in our timetable.</p>
+</li><li class="vertical-align-cell">
+						<a title="GO TO TIMETABLE" href="timetable" class="more mc-button light large template-arrow-horizontal-1-after">GO TO TIMETABLE</a>
+					</li></ul>
+			</div></div></div></div>
+	</div>
+</div>
+
+
+
+
+
+<div class="container" style="z-index:-1!important">
+  <div class="widgeting">
+     <div class="chat_header">
+        <!--Add the name of the bot here -->
+        <span style="color:white;margin-left: 5px;">MedBot 😃</span>
+        <span style="color:white;margin-right: 5px;float:right;margin-top: 5px;" id="close">
+        <i class="material-icons">X&nbsp;&nbsp;&nbsp;&nbsp;</i>
+        </span>
+     </div>
+     <!--Chatbot contents goes here -->
+     <div class="chats" id="chats">
+        <div class="clearfix"></div>
+     </div>
+     <!--user typing indicator -->
+     <div class="" style="display:flex;">
+        <input type="text" id="keypad" style="display:flex;" class="usrInput browser-default" placeholder="Type a message..." autocomplete="off" autofocus>
+         {% comment %} <form action='#' class="nobgform" style="display:flex;" > {% endcomment %}
+          {% comment %} {%csrf_token%} {% endcomment %}
+          <input type="submit" class="nobg browser-default" style="border: none;background-color: #fff !important;"  name="mybtn" autocomplete="off">
+        {% comment %} </form> {% endcomment %}
+     </div>
+  </div>
+  <!--bot widget -->
+  <div class="profile_div" id="profile_div">
+     <img class="imgProfile" src="static/medbay/img/botAvatar.png"/>
+  </div>
+</div>
+
+
+
+
+
+
+
+						<div class="footer-container">
+				<div class="footer">
+										<ul class="footer-banner-box-container clearfix">
+								<li class="footer-banner-box features-map animated-element animation-fadeIn duration-500">
+			<h2>Find a clinic near you</h2>						<p class="content-margin">
+			<a href='https://www.google.pl/maps/place/Keilor+East+Wiktoria+3033,+Australia/@-37.7366966,144.8379977,14z/data=!3m1!4b1!4m5!3m4!1s0x6ad65ebe7dc6fd43:0x5045675218cd360!8m2!3d-37.741667!4d144.863056' target='_blank'>Find Us On Map</a>			</p>
+		</li>
+				<li class="footer-banner-box features-phone animated-element animation-slideRight duration-800 delay-250">
+			<h2>Call for an appointment!</h2>						<p class="content-margin">
+			<a href='tel:(510)2105225#'>(510) 210-5225</a>			</p>
+		</li>
+				<li class="footer-banner-box features-email animated-element animation-slideRight200 duration-800 delay-500">
+			<h2>Feel free to message us!</h2>						<p class="content-margin">
+			<a href='mailto:contact@medicenter.com'>Send an Email</a>			</p>
+		</li>
+							</ul>
+										<div class="footer-box-container vc_row wpb_row vc_row-fluid clearfix">
+						<div id='medicenter_contact_details-2' class='widget mc_contact_details_widget vc_col-sm-3 wpb_column vc_column_container'><h3 class='box-header animation-slide animation-slide'>About Us</h3><p class="info">At MediCenter we intend to create medicines that improve both the quality and duration of patient lives.</p>		<ul class="contact-data">
+						<li class="clearfix template-location"><div class="value">2702 Memory Lane<br>Chicago, IL 60605</div></li>
+						<li class="clearfix template-phone"><div class="value"><a href="tel:(510)2105225">(510) 210-5225</a><br><a href="tel:(510)2105226">(510) 210-5226</a></div></li>
+						<li class="clearfix template-mail"><div class="value"><a href="mailto:booking@medicenter.com">booking@medicenter.com</a></div></li>
+					</ul>
+		</div><div id='nav_menu-2' class='widget widget_nav_menu vc_col-sm-3 wpb_column vc_column_container'><h3 class='box-header animation-slide'>Additional Links</h3><div class="menu-additional-links-container"><ul id="menu-additional-links" class="menu"><li id="menu-item-3881" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3881"><a href="http://quanticalabs.com/wp_themes/medicenter/about/">About</a></li>
+<li id="menu-item-3682" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3682"><a href="http://quanticalabs.com/wp_themes/medicenter/pricing-plans/">Pricing</a></li>
+<li id="menu-item-3670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3670"><a href="http://quanticalabs.com/wp_themes/medicenter/ourdoctors/">Doctors</a></li>
+<li id="menu-item-3685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3685"><a href="http://quanticalabs.com/wp_themes/medicenter/departments/">Departments</a></li>
+<li id="menu-item-3678" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3678"><a href="http://quanticalabs.com/wp_themes/medicenter/blog/">Blog</a></li>
+<li id="menu-item-3671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3671"><a href="http://quanticalabs.com/wp_themes/medicenter/timetable/">Timetable</a></li>
+<li id="menu-item-3681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3681"><a href="http://quanticalabs.com/wp_themes/medicenter/medical-care/">Medical Care</a></li>
+<li id="menu-item-3680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3680"><a href="http://quanticalabs.com/wp_themes/medicenter/gallery-2-columns/">Gallery</a></li>
+<li id="menu-item-3683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3683"><a href="http://quanticalabs.com/wp_themes/medicenter/shop/">Shop</a></li>
+<li id="menu-item-3679" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3679"><a href="http://quanticalabs.com/wp_themes/medicenter/contact/">Contact</a></li>
+<li id="menu-item-3684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3684"><a href="http://quanticalabs.com/wp_themes/medicenter/shortcodes/">Shortcodes</a></li>
+</ul></div></div><div id='medicenter_scrolling_recent_posts-2' class='widget mc-scrolling-recent-posts-widget vc_col-sm-3 wpb_column vc_column_container'>		<div class="clearfix scrolling-controls">
+			<div class="header-left">
+				<h3 class='box-header animation-slide animation-slide'>Latest Posts</h3>			</div>
+			<div class="header-right">
+				<a href="#" id="footer_recent_posts_prev" class="scrolling-list-control-left template-arrow-horizontal-3"></a>
+				<a href="#" id="footer_recent_posts_next" class="scrolling-list-control-right template-arrow-horizontal-3"></a>
+			</div>
+		</div>
+		<div class="scrolling-list-wrapper">
+			<ul class="scrolling-list footer-recent-posts">
+								<li>
+					<a href="http://quanticalabs.com/wp_themes/medicenter/2017/02/12/many-doctors-use-wrong-test-to-diagnose-kids-food-allergies/" title="Many doctors use wrong test to diagnose kids food allergies">
+						Many doctors use wrong test to diagnose kids food allergies					</a>
+					<abbr title="Feb 12, 2017" class="timeago">Feb 12, 2017</abbr>
+				</li>
+								<li>
+					<a href="http://quanticalabs.com/wp_themes/medicenter/2017/01/15/rising-cost-of-diabetes-care-concerns-patients-and-doctors/" title="Rising cost of diabetes care concerns patients and doctors">
+						Rising cost of diabetes care concerns patients and doctors					</a>
+					<abbr title="Jan 15, 2017" class="timeago">Jan 15, 2017</abbr>
+				</li>
+								<li>
+					<a href="http://quanticalabs.com/wp_themes/medicenter/2017/01/05/can-breakfast-help-keep-us-thin-nutrition-science-is-tricky/" title="Can breakfast help keep us thin? Nutrition science is tricky">
+						Can breakfast help keep us thin? Nutrition science is tricky					</a>
+					<abbr title="Jan 5, 2017" class="timeago">Jan 5, 2017</abbr>
+				</li>
+								<li>
+					<a href="http://quanticalabs.com/wp_themes/medicenter/2016/12/22/new-report-abortions-in-us-drop-to-lowest-level-since-1974/" title="New report: Abortions in US drop to lowest level since 1974">
+						New report: Abortions in US drop to lowest level since 1974					</a>
+					<abbr title="Dec 22, 2016" class="timeago">Dec 22, 2016</abbr>
+				</li>
+								<li>
+					<a href="http://quanticalabs.com/wp_themes/medicenter/2016/11/17/fitness-blogger-says-weight-gain-led-to-happier-and-healthier-life/" title="Fitness blogger says weight gain led to happier and healthier life">
+						Fitness blogger says weight gain led to happier and healthier life					</a>
+					<abbr title="Nov 17, 2016" class="timeago">Nov 17, 2016</abbr>
+				</li>
+							</ul>
+		</div>
+		</div><div id='medicenter_twitter-2' class='widget ql_twitter_widget vc_col-sm-3 wpb_column vc_column_container'>		<div class="clearfix scrolling-controls">
+			<div class="header-left">
+				<h3 class='box-header animation-slide animation-slide'>Latest Tweets</h3>			</div>
+			<div class="header-right">
+				<a href="#" id="latest_tweets_prev" class="scrolling-list-control-left template-arrow-horizontal-3"></a>
+				<a href="#" id="latest_tweets_next" class="scrolling-list-control-right template-arrow-horizontal-3"></a>
+			</div>
+		</div>
+		<div class="scrolling-list-wrapper">
+			<ul class="scrolling-list latest-tweets">
+				<li><p>We've released new version (v3.0) of our #Image #Multi #Upload #Script. Please check at #CodeCanyon <a href="https://t.co/zWx3A7jd3G" target="_blank">t.co/zWx3A7jd3G</a><abbr title="Nov 20, 2020" class="timeago">Nov 20, 2020</abbr></p></li><li><p>We've released new version (v4.0) of our #Ajax #Multi #Upload #WP #Plugin. Please check at #CodeCanyon <a href="https://t.co/gcIWQaizSO" target="_blank">t.co/gcIWQaizSO</a><abbr title="Nov 19, 2020" class="timeago">Nov 19, 2020</abbr></p></li><li><p>@RemiSovran Support for all our items is conducted through our Support Forum - <a href="https://t.co/jG0VHedZ4J" target="_blank">t.co/jG0VHedZ4J</a>
+Please regis… <a href="https://t.co/ZjNlEinPMA" target="_blank">t.co/ZjNlEinPMA</a><abbr title="Nov 9, 2020" class="timeago">Nov 9, 2020</abbr></p></li><li><p>We've released new version (v6.4) of our #Timetable #Responsive #Booking #Schedule #WP Plugin. Please check at… <a href="https://t.co/CpAIjAKB7n" target="_blank">t.co/CpAIjAKB7n</a><abbr title="Oct 19, 2020" class="timeago">Oct 19, 2020</abbr></p></li><li><p>We've released new version (v13.9) of our GymBase #Gym #Fitness #WordPress Theme. Please check at #ThemeForest <a href="https://t.co/8mEwDr0hie" target="_blank">t.co/8mEwDr0hie</a><abbr title="Oct 14, 2020" class="timeago">Oct 14, 2020</abbr></p></li><li><p>We've released new version (v12.6) of our MediCenter #Health #Medical #Clinic #WordPress Theme. Please check at… <a href="https://t.co/O9yGyzfCAc" target="_blank">t.co/O9yGyzfCAc</a><abbr title="Oct 14, 2020" class="timeago">Oct 14, 2020</abbr></p></li><li><p>We've released new version (v4.9) of our Pressroom #News #Magazine #WordPress Theme. Please check at #ThemeForest <a href="https://t.co/VSiuakDbGa" target="_blank">t.co/VSiuakDbGa</a><abbr title="Oct 14, 2020" class="timeago">Oct 14, 2020</abbr></p></li><li><p>We've released new version (v6.5) of our Renovate #Construction #Renovation #WordPress Theme. Check at #ThemeForest <a href="https://t.co/Qq0xOlOy5p" target="_blank">t.co/Qq0xOlOy5p</a><abbr title="Oct 13, 2020" class="timeago">Oct 13, 2020</abbr></p></li><li><p>We've released new version (v6.0) of our #Car Service #Mechanic #Auto #Shop #WordPress Theme. Check at #ThemeForest <a href="https://t.co/GDaLlbPA2q" target="_blank">t.co/GDaLlbPA2q</a><abbr title="Oct 13, 2020" class="timeago">Oct 13, 2020</abbr></p></li><li><p>We've released new version (v3.7) of our #CleanMate #Cleaning Company #Maid #Gardening #WordPress Theme. Please che… <a href="https://t.co/yEQnNVPjgG" target="_blank">t.co/yEQnNVPjgG</a><abbr title="Oct 13, 2020" class="timeago">Oct 13, 2020</abbr></p></li>			</ul>
+		</div>
+		</div>					</div>
+									</div>
+			</div>
+						<div class="copyright-area-container">
+				<div class="copyright-area clearfix">
+										<div class="copyright-text">
+					© 2020 <a href='https://1.envato.market/medicenter-responsive-medical-wordpress-theme' target='_blank'>MediCenter Theme</a>. All rights reserved.					</div>
+					<div id='text-4' class='widget widget_text'>			<div class="textwidget"><div class="icons-list">
+<a href="https://twitter.com/QuanticaLabs" target="_blank" class="icon-single mc-icon social-twitter" rel="noopener noreferrer"></a>
+<a href="https://www.facebook.com/QuanticaLabs/" target="_blank" class="icon-single mc-icon social-facebook" rel="noopener noreferrer"></a>
+<a href="https://www.pinterest.com/quanticalabs/" target="_blank" class="icon-single mc-icon social-pinterest" rel="noopener noreferrer"></a>
+</div></div>
+		</div><div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="footer-menu"><li id="menu-item-3602" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3602"><a href="#">Privacy</a></li>
+<li id="menu-item-3603" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3603"><a href="#">Terms</a></li>
+<li id="menu-item-3604" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3604"><a href="#">Sitemap</a></li>
+</ul></div>				</div>
+			</div>
+					</div>
+				<a href="#top" class="scroll-top animated-element template-arrow-vertical-3" title="Scroll to top"></a>
+		<link rel="stylesheet" property='stylesheet' type="text/css" href="http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/style_selector/style_selector.css">
+
+<script type="text/javascript" src="http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/style_selector/style_selector.js"></script>
+
+<script type="text/html" id="wpb-modifications"></script><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400%2C200%7CRoboto:400" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+			<script type="text/javascript">
+		if(typeof revslider_showDoubleJqueryError === "undefined") {
+			function revslider_showDoubleJqueryError(sliderID) {
+				var err = "<div class='rs_error_message_box'>";
+				err += "<div class='rs_error_message_oops'>Oops...</div>";
+				err += "<div class='rs_error_message_content'>";
+				err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+				err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+				err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+				err += "</div>";
+			err += "</div>";
+				jQuery(sliderID).show().html(err);
+			}
+		}
+		</script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp_themes\/medicenter\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/wp_themes\/medicenter\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=3.8.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp_themes\/medicenter\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/wp_themes\/medicenter\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_dc85d83c05e79f1e47b0475a16978ff4","fragment_name":"wc_fragments_dc85d83c05e79f1e47b0475a16978ff4","request_timeout":"5000"};
+/* ]]> */
+</script>
+ <script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=3.8.1'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-includes/js/jquery/ui/accordion.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"M d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.ba-bbq.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.history.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.easing.1.3.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.carouFredSel-6.2.1-packed.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.sliderControl.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.timeago.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.hint.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.isotope-packed.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.prettyPhoto.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.qtip.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/jquery.blockUI.js?ver=5.4.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var config = [];
+config = {"ajaxurl":"http:\/\/quanticalabs.com\/wp_themes\/medicenter\/wp-admin\/admin-ajax.php","themename":"medicenter","home_url":"http:\/\/quanticalabs.com\/wp_themes\/medicenter","is_rtl":0};;
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/main.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/js/odometer.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-includes/js/wp-embed.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.1'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/js_composer/assets/lib/vc_waypoints/vc-waypoints.min.js?ver=6.1'></script>
+<script type='text/javascript' src='http://quanticalabs.com/wp_themes/medicenter/wp-content/plugins/js_composer/assets/lib/bower/jquery-ui-tabs-rotate/jquery-ui-tabs-rotate.min.js?ver=6.1'></script>
+<script src="{% static 'medbay/js/script_chat.js' %}"></script>
+
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+	</body>
+</html>

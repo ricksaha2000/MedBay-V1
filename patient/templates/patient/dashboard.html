@@ -1,0 +1,1420 @@
+{%load static%}
+{% comment %} {% extends "base_dashboard.html" %}
+{% block dashboard %}
+<h1>Patient Dashboard</h1>
+{% endblock %} {% endcomment %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>MEDBAY</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+		<!-- Favicons -->
+		<link href="https://doccure-html.dreamguystech.com/template/assets/img/favicon.png" rel="icon">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://doccure-html.dreamguystech.com/template/assets/css/bootstrap.min.css">
+
+		<!-- Fontawesome CSS -->
+		<!-- <link rel="stylesheet" href="https://doccure-html.dreamguystech.com/template/assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="https://doccure-html.dreamguystech.com/template/assets/plugins/fontawesome/css/all.min.css"> -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="https://doccure-html.dreamguystech.com/template/assets/css/style.css">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.min.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- Header -->
+			<header class="header">
+				<nav class="navbar navbar-expand-lg header-nav">
+					<div class="navbar-header">
+						<a id="mobile_btn" href="javascript:void(0);">
+							<span class="bar-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</a>
+						<a href="/" title="MediCenter">
+              <img src="http://quanticalabs.com/wp_themes/medicenter/wp-content/themes/medicenter/images/header_logo.png" alt="logo" />
+                            <span class="logo">MedBay</span>
+					</div>
+					<div class="main-menu-wrapper">
+						<div class="menu-header">
+							<a href="/" class="menu-logo">
+								<img src="https://doccure-html.dreamguystech.com/template/assets/img/logo.pn" class="img-fluid" alt="MedBay">
+							</a>
+							<a id="menu_close" class="menu-close" href="javascript:void(0);">
+								<i class="fa fa-times"></i>
+							</a>
+						</div>
+						<ul class="main-nav">
+							<li class="has-submenu">
+								<a href="http://127.0.0.1:8000/patient/dashboard/">Home <i class="fa fa-chevron-down"></i></a>
+								<ul class="submenu">
+									<li><a href="index.html">Home</a></li>
+									
+								</ul>
+							</li>
+							
+							<li class="login-link">
+								<!-- <a href="login.html">Login / Signup</a> -->
+							</li>
+						</ul>
+					</div>		 
+					<ul class="nav header-navbar-rht">
+						<li class="nav-item contact-item">
+							<div class="header-contact-img">
+								<i class="far fa-hospital"></i>							
+							</div>
+							<div class="header-contact-detail">
+								<p class="contact-header">Contact</p>
+								<p class="contact-info-header">7595093227</p>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link header-login" href="/login/">Logout</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<!-- /Header -->
+
+			<!-- Breadcrumb -->
+			<div class="breadcrumb-bar">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-12 col-12">
+							<nav aria-label="breadcrumb" class="page-breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="/">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+								</ol>
+							</nav>
+							<h2 class="breadcrumb-title">Dashboard</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Breadcrumb -->
+
+			<!-- Page Content -->
+			<div class="content">
+				<div class="container-fluid">
+
+					<div class="row">
+
+						<!-- Profile Sidebar -->
+						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+							<div class="profile-sidebar">
+								<div class="widget-profile pro-widget-content">
+									<div class="profile-info-widget">
+										<a href="#" class="booking-doc-img">
+											<img src="{% static 'medbay/img/jayit.jpg' %}" alt="User Image">
+										</a>
+										<div class="profile-det-info">
+											<h3>Jayit Saha</h3>
+											<div class="patient-details">
+												<h5><i class="fa fa-birthday-cake"></i> 31 Jul 2000, 20 years</h5>
+												<h5 class="mb-0"><i class="fa fa-map-marker-alt"></i> Kolkata, India</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard-widget">
+									<nav class="dashboard-menu">
+										<ul>
+											<li class="active">
+												<a href="patient-dashboard.html">
+													<i class="fa fa-columns"></i>
+													<span>Dashboard</span>
+												</a>
+											</li>
+											<li>
+												<a href="http://127.0.0.1:8002/">
+													<i class="fa fa-leaf"></i>
+													<span>AI Diet Planner</span>
+												</a>
+											</li>
+											<li>
+												<a href="http://127.0.0.1:8003/">
+													<i class="fa fa-user-md"></i>
+													<span>E-Medicine</span>
+												</a>
+											</li>
+											
+											<li>
+												<a href="http://127.0.0.1:5000/">
+													<i class="fa fa-users"></i>
+													<span>A Happy Place</span>
+												</a>
+											</li>
+											<li>
+												<a href="/patient/test/">
+													<i class="fa fa-heartbeat"></i>
+													<span>Fitness Arena</span>
+												</a>
+											</li>
+											
+											<li>
+												<a href="/patient/test/">
+													<i class="fa fa-medkit"></i>
+													<span>E-Tests</span>
+												</a>
+											</li>
+											<li>
+												<a href="/heart_beat/">
+													<i class="fa fa-heart"></i>
+													<span>Heart Beat Monitor</span>
+												</a>
+											</li>
+										
+											<li>
+												<a href="http://127.0.0.1:8001/brain_games">
+													<i class="fa fa-gamepad"></i>
+													<span>Brain Games</span>
+												</a>
+											</li>
+											
+										</ul>
+									</nav>
+								</div>
+
+							</div>
+						</div>
+						<!-- / Profile Sidebar -->
+
+						<div class="col-md-7 col-lg-8 col-xl-9">
+							<div class="card">
+								<div class="card-body pt-0">
+
+									<!-- Tab Menu -->
+									<nav class="user-tabs mb-4">
+										<ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+											<li class="nav-item">
+												<a class="nav-link  active" href="#pat_appointments" data-toggle="tab">Remote Healthcare</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#pat_prescriptions" data-toggle="tab">Appointments</a>
+											</li>
+											
+											<li class="nav-item">
+												<a class="nav-link" href="#pat_medical_records" data-toggle="tab"><span class="med-records">Medical Records</span></a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#pat_billing" data-toggle="tab">Billing</a>
+											</li>
+										</ul>
+									</nav>
+									<!-- /Tab Menu -->
+
+									<!-- Tab Content -->
+									<div class="tab-content pt-0">
+
+										<!-- Appointment Tab -->
+										<div id="pat_appointments" class="tab-pane fade show active">
+											<div class="card card-table mb-0">
+												<div class="card-body">
+
+													<div class="row">
+														<div class="col-lg-12 col-md-12">
+														
+															<div class="row blog-grid-row">
+
+																<div class="col-md-6 col-sm-12">
+																
+																	<!-- Blog Post -->
+																	<div class="blog grid-blog">
+																		<div class="blog-image">
+																			<a href="http://127.0.0.1:8002/"><img  class="img-fluid" src="https://preview.colorlib.com/theme/healthcoach/images/services-2.jpg" alt="Post Image"></a>
+																		</div>
+																		<div class="blog-content">
+																			<ul class="entry-meta meta-item">
+																				<li>
+																					<!-- <div class="post-author">
+																						<a href="doctor-profile.html"><img src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-01.jpg" alt="Post Author"> 
+																							<span>Dr. Ruby Perrin</span></a>
+																					</div> -->
+																				</li>
+																				<!-- <li><i class="far fa-clock"></i> 4 Dec 2019</li> -->
+																			</ul>
+																			<h3 class="blog-title"><a href="http://127.0.0.1:8002/">AI Diet Planner</a></h3>
+																			<p class="mb-0">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+																		</div>
+
+																		<br />
+																			<div class="submit-section submit-btn-bottom">
+																				<a href="http://127.0.0.1:8002/" class="btn btn-primary submit-btn">DIET UP</a>
+																			</div>
+																	</div>
+																	<!-- /Blog Post -->
+																	
+																</div>
+																
+
+
+																<div class="col-md-6 col-sm-12">
+																
+																	<!-- Blog Post -->
+																	<div class="blog grid-blog">
+																		<div class="blog-image">
+																			<a href="http://127.0.0.1:8003/"><img style="height: 440px;" class="img-fluid" src="https://demotheme.site/prestashop/at_phami_demo/themes/at_phami/assets/img/modules/leoslideshow/slide1-h7.jpg" alt="Post Image"></a>
+																		</div>
+																		<div class="blog-content">
+																			<ul class="entry-meta meta-item">
+																				<li>
+																					<!-- <div class="post-author">
+																						<a href="doctor-profile.html"><img src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-04.jpg" alt="Post Author"> <span>Dr. Sofia Brient</span></a>
+																					</div> -->
+																					
+																				</li>
+																				<!-- <li><i class="far fa-clock"></i> 2 Dec 2019</li> -->
+																			</ul>
+																			<h3 class="blog-title"><a href="http://127.0.0.1:8003/">E-Medicine</a></h3>
+																			<p class="mb-0">  A Multi Vendor Pharmaceutical application designed for the old with COVID19 tests,embedded with a facial biometric system and automated medicine ordering chatbot, along with a Minimum Distance High Quality Rating Algorihm to give Local vendors a fair chance.  </p>
+																		</div>
+
+																		<br /><br />
+																			<div class="submit-section submit-btn-bottom" style="margin-top: px;">
+																				
+																				<form action="/heart_beat/" method="post">
+																					{% csrf_token %}
+																				<a href="http://127.0.0.1:8003/" class="btn btn-primary submit-btn">AYURMED</a>
+
+																			</form>
+																			</div>
+																	</div>
+																	<!-- /Blog Post -->
+																	
+																</div>
+																<!-- <div class="col-md-6 col-sm-12"> -->
+																
+																	<!-- Blog Post -->
+																	<!-- <div class="blog grid-blog">
+																		<div class="blog-image">
+																			<a href="blog-details.html"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXxQEwqFgeFhuuNl5o01ewi_0eJP4tYxbC2A&usqp=CAU" alt="Post Image"></a>
+																		</div>
+																		<div class="blog-content">
+																			<ul class="entry-meta meta-item">
+																				<li>
+																				
+																				</li>
+																			</ul>
+																			<h3 class="blog-title"><a href="blog-details.html">Get healthy with friends</a></h3>
+																			<p class="mb-0">When it comes to fitness, working out in group settings can boost motivation, burn more calories and make exercise fun.</p>
+																		</div>
+
+																		<br />
+																			<div class="submit-section submit-btn-bottom">
+																				<button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+																			</div>
+																	</div>
+																	
+																</div> -->
+																<div class="col-md-6 col-sm-12">
+																
+																	<!-- Blog Post -->
+																	<div class="blog grid-blog">
+																		<div class="blog-image">
+																			<a href="http://127.0.0.1:5000/"><img class="img-fluid" src="https://doccure-html.dreamguystech.com/template/assets/img/blog/blog-04.jpg" alt="Post Image"></a>
+																		</div>
+																		<div class="blog-content">
+																			<ul class="entry-meta meta-item">
+																				<li>
+																					<!-- <div class="post-author">
+																						<a href="doctor-profile.html"><img src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-04.jpg" alt="Post Author"> <span>Dr. Sofia Brient</span></a>
+																					</div> -->
+																				</li>
+																				<!-- <li><i class="far fa-clock"></i> 2 Dec 2019</li> -->
+																			</ul>
+																			<h3 class="blog-title"><a href="http://127.0.0.1:5000/">Depressed?</a></h3>
+																			<p class="mb-0">Depression is a mood disorder that can affect a person's daily life. It may be described as feelings of sadness, loss, or anger. Do you feel depressed or suicidal? Talk to our chatbot and get rid of it.</p>
+																		</div>
+
+																		<br /><br />
+																			<div class="submit-section submit-btn-bottom" style="margin-top: px;">
+																				<a href="http://127.0.0.1:5000/" class="btn btn-primary submit-btn">HOPE</a>
+																			</div>
+																	</div>
+																	<!-- /Blog Post -->
+																	
+																</div>
+
+
+
+
+																<div class="col-md-6 col-sm-12">
+																
+																	<!-- Blog Post -->
+																	<div class="blog grid-blog">
+																		<div class="blog-image">
+																			<a href="blog-details.html"><img class="img-fluid" src="https://preview.colorlib.com/theme/healthcoach/images/services-1.jpg" alt="Post Image"></a>
+																		</div>
+																		<div class="blog-content">
+																			<ul class="entry-meta meta-item">
+																				<li>
+																					<!-- <div class="post-author">
+																						<a href="doctor-profile.html"><img src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-02.jpg" alt="Post Author"> <span>Dr. Darren Elder</span></a>
+																					</div> -->
+																				</li>
+																				<!-- <li><i class="far fa-clock"></i> 3 Dec 2019</li> -->
+																			</ul>
+																			<h3 class="blog-title"><a id="video_fit" data-toggle="modal" data-target="#voice_call" href="javascript:void(0)">Get Fit</a></h3>
+																			<p class="mb-0">Regular exercise is good for you, and it can help you lose weight. But if you are like many Americans, you are busy, you have a sedentary job, and you haven't yet changed your exercise habits.</p>
+																			<br /><br />
+																			
+																			<div class="submit-section submit-btn-bottom" style="margin-top: px;">
+																				<a data-toggle="modal" data-target="#voice_call" href="javascript:void(0)" class="btn btn-primary submit-btn">Get Fit</a>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- /Blog Post -->
+																	
+																</div>
+
+																
+
+
+															
+
+
+																<div class="col-md-6 col-sm-12">
+																
+																	<!-- Blog Post -->
+																	<div class="blog grid-blog">
+																		<div class="blog-image">
+																			<a href="/patient/test/"><img class="img-fluid" src="https://dnd.com.pk/wp-content/uploads/2019/06/Medical-Tests-You-Should-Get-after-the-Age-of-50-1200x720.jpg" alt="Post Image"></a>
+																		</div>
+																		<div class="blog-content">
+																			<ul class="entry-meta meta-item">
+																				<li>
+																					<!-- <div class="post-author">
+																						<a href="doctor-profile.html"><img src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-04.jpg" alt="Post Author"> <span>Dr. Sofia Brient</span></a>
+																					</div> -->
+																				</li>
+																				<!-- <li><i class="far fa-clock"></i> 2 Dec 2019</li> -->
+																			</ul>
+																			<h3 class="blog-title"><a href="/patient/test/">E-Tests</a></h3>
+																			<p class="mb-0">  Medical diagnostics are a category of medical tests designed to detect infections, conditions and diseases. A smart test recommendation system, to provide the best deals for various tests over a wide range of hospitals. </p>
+																		</div>
+
+																		<br /><br />
+																			<div class="submit-section submit-btn-bottom" style="margin-top: px;">
+																				
+																				<form action="/heart_beat/" method="post">
+																					{% csrf_token %}
+																				<a href="/patient/test/" class="btn btn-primary submit-btn">E-Tests</a>
+
+																			</form>
+																			</div>
+																	</div>
+																	<!-- /Blog Post -->
+																	
+																</div>
+
+
+																<div class="col-md-6 col-sm-12">
+																
+																	<!-- Blog Post -->
+																	<div class="blog grid-blog">
+																		<div class="blog-image">
+																			<a href="/heart_beat/"><img class="img-fluid" src="https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/235/235710/heart-rate-symbol.jpg?w=1155&h=1541" alt="Post Image"></a>
+																		</div>
+																		<div class="blog-content">
+																			<ul class="entry-meta meta-item">
+																				<li>
+																					<!-- <div class="post-author">
+																						<a href="doctor-profile.html"><img src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-04.jpg" alt="Post Author"> <span>Dr. Sofia Brient</span></a>
+																					</div> -->
+																				</li>
+																				<!-- <li><i class="far fa-clock"></i> 2 Dec 2019</li> -->
+																			</ul>
+																			<h3 class="blog-title"><a href="/heart_beat/">Heart Beat Monitor</a></h3>
+																			<p class="mb-0"> Heart Beat Monitor   </p>
+																		</div>
+
+																		<br /><br />
+																			<div class="submit-section submit-btn-bottom" style="margin-top: px;">
+																				
+																				<form action="/heart_beat/" method="post">
+																					{% csrf_token %}
+																					<div class="submit-section submit-btn-bottom" style="margin-top: px;">
+																						<a data-toggle="modal" data-target="#video_call" href="javascript:void(0)" class="btn btn-primary submit-btn">Heart Beat Monitor</a>
+																					</div>
+
+																			</form>
+																			</div>
+																	</div>
+																	<!-- /Blog Post -->
+																	
+																</div>
+															
+
+
+																<div class="col-md-6 col-sm-12">
+																
+																	<!-- Blog Post -->
+																	<div class="blog grid-blog">
+																		<div class="blog-image">
+																			<a href="http://127.0.0.1:8001/brain_games"><img class="img-fluid" src="https://chit-club.ancorathemes.com/wp-content/uploads/2019/05/image-53-copyright.jpg" alt="Post Image"></a>
+																		</div>
+																		<div class="blog-content">
+																			<ul class="entry-meta meta-item">
+																				<li>
+																				
+																				</li>
+																				<!-- <li><i class="far fa-clock"></i> 2 Dec 2019</li> -->
+																			</ul>
+																			<h3 class="blog-title"><a href="http://127.0.0.1:8001/brain_games">Brain games
+																			</a></h3>
+																			<p class="mb-0">The more convincing evidence is that brain games may help sharpen certain thinking skills that tend to wane with age, such as processing speed, planning skills, reaction time, decision making, and short-term memory</p>
+																		</div>
+
+																		<br /><br />
+																			<div class="submit-section submit-btn-bottom" style="margin-top: px;">
+																				<a href="http://127.0.0.1:8001/brain_games" class="btn btn-primary submit-btn">GAME ON</a>
+																			</div>
+																	</div>
+																	<!-- /Blog Post -->
+																	
+																</div>
+
+
+																
+															
+																
+															
+															</div>
+													
+												</div>
+											</div>
+										</div>
+										</div>
+										</div>
+										<!-- /Appointment Tab -->
+
+										<!-- Prescription Tab -->
+										<div class="tab-pane fade" id="pat_prescriptions">
+											<div class="card card-table mb-0">
+												<div class="card-body">
+													<div class="table-responsive">
+														<table class="table table-hover table-center mb-0">
+															<thead>
+																<tr>
+																	<th>Doctor</th>
+																	<th>Appt Date</th>
+																	<th>Booking Date</th>
+																	<th>Amount</th>
+																	<th>Follow Up</th>
+																	<th>Status</th>
+																	<th></th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-01.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Ruby Perrin <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td>14 Nov 2019 <span class="d-block text-info">10.00 AM</span></td>
+																	<td>12 Nov 2019</td>
+																	<td>$160</td>
+																	<td>16 Nov 2019</td>
+																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Darren Elder <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td>12 Nov 2019 <span class="d-block text-info">8.00 PM</span></td>
+																	<td>12 Nov 2019</td>
+																	<td>$250</td>
+																	<td>14 Nov 2019</td>
+																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-03.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Deborah Angel <span>Cardiology</span></a>
+																		</h2>
+																	</td>
+																	<td>11 Nov 2019 <span class="d-block text-info">11.00 AM</span></td>
+																	<td>10 Nov 2019</td>
+																	<td>$400</td>
+																	<td>13 Nov 2019</td>
+																	<td><span class="badge badge-pill bg-danger-light">Cancelled</span></td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-04.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Sofia Brient <span>Urology</span></a>
+																		</h2>
+																	</td>
+																	<td>10 Nov 2019 <span class="d-block text-info">3.00 PM</span></td>
+																	<td>10 Nov 2019</td>
+																	<td>$350</td>
+																	<td>12 Nov 2019</td>
+																	<td><span class="badge badge-pill bg-warning-light">Pending</span></td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-05.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Marvin Campbell <span>Ophthalmology</span></a>
+																		</h2>
+																	</td>
+																	<td>9 Nov 2019 <span class="d-block text-info">7.00 PM</span></td>
+																	<td>8 Nov 2019</td>
+																	<td>$75</td>
+																	<td>11 Nov 2019</td>
+																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-06.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Katharine Berthold <span>Orthopaedics</span></a>
+																		</h2>
+																	</td>
+																	<td>8 Nov 2019 <span class="d-block text-info">9.00 AM</span></td>
+																	<td>6 Nov 2019</td>
+																	<td>$175</td>
+																	<td>10 Nov 2019</td>
+																	<td><span class="badge badge-pill bg-danger-light">Cancelled</span></td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-07.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Linda Tobin <span>Neurology</span></a>
+																		</h2>
+																	</td>
+																	<td>8 Nov 2019 <span class="d-block text-info">6.00 PM</span></td>
+																	<td>6 Nov 2019</td>
+																	<td>$450</td>
+																	<td>10 Nov 2019</td>
+																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-08.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Paul Richard <span>Dermatology</span></a>
+																		</h2>
+																	</td>
+																	<td>7 Nov 2019 <span class="d-block text-info">9.00 PM</span></td>
+																	<td>7 Nov 2019</td>
+																	<td>$275</td>
+																	<td>9 Nov 2019</td>
+																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-09.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. John Gibbs <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td>6 Nov 2019 <span class="d-block text-info">8.00 PM</span></td>
+																	<td>4 Nov 2019</td>
+																	<td>$600</td>
+																	<td>8 Nov 2019</td>
+																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-10.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Olga Barlow  <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td>5 Nov 2019 <span class="d-block text-info">5.00 PM</span></td>
+																	<td>1 Nov 2019</td>
+																	<td>$100</td>
+																	<td>7 Nov 2019</td>
+																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<!-- /Prescription Tab -->
+
+										<!-- Medical Records Tab -->
+										<div id="pat_medical_records" class="tab-pane fade">
+											<div class="card card-table mb-0">
+												<div class="card-body">
+													<div class="table-responsive">
+														<table class="table table-hover table-center mb-0">
+															<thead>
+																<tr>
+																	<th>ID</th>
+																	<th>Date </th>
+																	<th>Description</th>
+																	<th>Attachment</th>
+																	<th>Created</th>
+																	<th></th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td><a href="javascript:void(0);">#MR-0010</a></td>
+																	<td>14 Nov 2019</td>
+																	<td>Dental Filling</td>
+																	<td><a href="#">dental-test.pdf</a></td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-01.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Ruby Perrin <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="javascript:void(0);">#MR-0009</a></td>
+																	<td>13 Nov 2019</td>
+																	<td>Teeth Cleaning</td>
+																	<td><a href="#">dental-test.pdf</a></td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Darren Elder <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="javascript:void(0);">#MR-0008</a></td>
+																	<td>12 Nov 2019</td>
+																	<td>General Checkup</td>
+																	<td><a href="#">cardio-test.pdf</a></td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-03.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Deborah Angel <span>Cardiology</span></a>
+																		</h2>
+																	</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="javascript:void(0);">#MR-0007</a></td>
+																	<td>11 Nov 2019</td>
+																	<td>General Test</td>
+																	<td><a href="#">general-test.pdf</a></td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-04.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Sofia Brient <span>Urology</span></a>
+																		</h2>
+																	</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="javascript:void(0);">#MR-0006</a></td>
+																	<td>10 Nov 2019</td>
+																	<td>Eye Test</td>
+																	<td><a href="#">eye-test.pdf</a></td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-05.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Marvin Campbell <span>Ophthalmology</span></a>
+																		</h2>
+																	</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="javascript:void(0);">#MR-0005</a></td>
+																	<td>9 Nov 2019</td>
+																	<td>Leg Pain</td>
+																	<td><a href="#">ortho-test.pdf</a></td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-06.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Katharine Berthold <span>Orthopaedics</span></a>
+																		</h2>
+																	</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="javascript:void(0);">#MR-0004</a></td>
+																	<td>8 Nov 2019</td>
+																	<td>Head pain</td>
+																	<td><a href="#">neuro-test.pdf</a></td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-07.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Linda Tobin <span>Neurology</span></a>
+																		</h2>
+																	</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="javascript:void(0);">#MR-0003</a></td>
+																	<td>7 Nov 2019</td>
+																	<td>Skin Alergy</td>
+																	<td><a href="#">alergy-test.pdf</a></td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-08.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Paul Richard <span>Dermatology</span></a>
+																		</h2>
+																	</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="javascript:void(0);">#MR-0002</a></td>
+																	<td>6 Nov 2019</td>
+																	<td>Dental Removing</td>
+																	<td><a href="#">dental-test.pdf</a></td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-09.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. John Gibbs <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="javascript:void(0);">#MR-0001</a></td>
+																	<td>5 Nov 2019</td>
+																	<td>Dental Filling</td>
+																	<td><a href="#">dental-test.pdf</a></td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-10.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Olga Barlow <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- /Medical Records Tab -->
+
+										<!-- Billing Tab -->
+										<div id="pat_billing" class="tab-pane fade">
+											<div class="card card-table mb-0">
+												<div class="card-body">
+													<div class="table-responsive">
+														<table class="table table-hover table-center mb-0">
+															<thead>
+																<tr>
+																	<th>Invoice No</th>
+																	<th>Doctor</th>
+																	<th>Amount</th>
+																	<th>Paid On</th>
+																	<th></th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>
+																		<a href="invoice-view.html">#INV-0010</a>
+																	</td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-01.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Ruby Perrin <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td>$450</td>
+																	<td>14 Nov 2019</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="invoice-view.html" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<a href="invoice-view.html">#INV-0009</a>
+																	</td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Darren Elder <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td>$300</td>
+																	<td>13 Nov 2019</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="invoice-view.html" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<a href="invoice-view.html">#INV-0008</a>
+																	</td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-03.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Deborah Angel <span>Cardiology</span></a>
+																		</h2>
+																	</td>
+																	<td>$150</td>
+																	<td>12 Nov 2019</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="invoice-view.html" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<a href="invoice-view.html">#INV-0007</a>
+																	</td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-04.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Sofia Brient <span>Urology</span></a>
+																		</h2>
+																	</td>
+																	<td>$50</td>
+																	<td>11 Nov 2019</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="invoice-view.html" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<a href="invoice-view.html">#INV-0006</a>
+																	</td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-05.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Marvin Campbell <span>Ophthalmology</span></a>
+																		</h2>
+																	</td>
+																	<td>$600</td>
+																	<td>10 Nov 2019</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="invoice-view.html" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<a href="invoice-view.html">#INV-0005</a>
+																	</td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-06.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Katharine Berthold <span>Orthopaedics</span></a>
+																		</h2>
+																	</td>
+																	<td>$200</td>
+																	<td>9 Nov 2019</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="invoice-view.html" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<a href="invoice-view.html">#INV-0004</a>
+																	</td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-07.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Linda Tobin <span>Neurology</span></a>
+																		</h2>
+																	</td>
+																	<td>$100</td>
+																	<td>8 Nov 2019</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="invoice-view.html" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<a href="invoice-view.html">#INV-0003</a>
+																	</td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-08.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Paul Richard <span>Dermatology</span></a>
+																		</h2>
+																	</td>
+																	<td>$250</td>
+																	<td>7 Nov 2019</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="invoice-view.html" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<a href="invoice-view.html">#INV-0002</a>
+																	</td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-09.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. John Gibbs <span>Dental</span></a>
+																		</h2>
+																	</td>
+																	<td>$175</td>
+																	<td>6 Nov 2019</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="invoice-view.html" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<a href="invoice-view.html">#INV-0001</a>
+																	</td>
+																	<td>
+																		<h2 class="table-avatar">
+																			<a href="doctor-profile.html" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="https://doccure-html.dreamguystech.com/template/assets/img/doctors/doctor-thumb-10.jpg" alt="User Image">
+																			</a>
+																			<a href="doctor-profile.html">Dr. Olga Barlow <span>#0010</span></a>
+																		</h2>
+																	</td>
+																	<td>$550</td>
+																	<td>5 Nov 2019</td>
+																	<td class="text-right">
+																		<div class="table-action">
+																			<a href="invoice-view.html" class="btn btn-sm bg-info-light">
+																				<i class="far fa-eye"></i> View
+																			</a>
+																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
+																				<i class="fa fa-print"></i> Print
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- /Billing Tab -->
+
+									</div>
+									<!-- Tab Content -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- /Page Content -->
+
+		
+
+		</div>
+		<!-- /Main Wrapper -->
+		<div class="modal fade call-modal" id="voice_call" style="justify-content: center;">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content" style="width: 600%;">
+					<div class="modal-body"  >
+						<!-- Outgoing Call -->
+						<div class="call-box incoming-box">
+							<div class="call-wrapper" >
+								<video controls id="video1" style="width: 450px; height: auto; margin:0 auto; frameborder:0;">
+									<source src="{% static 'medbay/img/yoga.mp4' %}" type="video/mp4">
+									Your browser doesn't support HTML5 video tag.
+								  </video>
+								<!-- <div class="call-inner">
+									<video controls id="video1" style="width: 100%; height: auto; margin:0 auto; frameborder:0;">
+										<source src="{% static 'medbay/img/video.mp4' %}" type="video/mp4">
+										Your browser doesn't support HTML5 video tag.
+									  </video>
+								</div> -->
+							</div>
+						</div>
+						<!-- Outgoing Call -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- jQuery -->
+
+
+
+		<div class="modal fade call-modal" id="video_call" style="justify-content: center;">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content" style="width: 600%;">
+					<div class="modal-body"  >
+						<!-- Outgoing Call -->
+						<div class="call-box incoming-box">
+							<div class="call-wrapper" >
+								<video controls id="video1" style="width: 450px; height: auto; margin:0 auto; frameborder:0;">
+									<source src="{% static 'medbay/img/heart.mp4' %}" type="video/mp4">
+									Your browser doesn't support HTML5 video tag.
+								  </video>
+								<!-- <div class="call-inner">
+									<video controls id="video1" style="width: 100%; height: auto; margin:0 auto; frameborder:0;">
+										<source src="{% static 'medbay/img/video.mp4' %}" type="video/mp4">
+										Your browser doesn't support HTML5 video tag.
+									  </video>
+								</div> -->
+							</div>
+						</div>
+						<!-- Outgoing Call -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://doccure-html.dreamguystech.com/template/assets/js/jquery.min.js"></script>
+
+		<!-- Bootstrap Core JS -->
+		<script src="https://doccure-html.dreamguystech.com/template/assets/js/popper.min.js"></script>
+		<script src="https://doccure-html.dreamguystech.com/template/assets/js/bootstrap.min.js"></script>
+
+		<!-- Sticky Sidebar JS -->
+        <script src="https://doccure-html.dreamguystech.com/template/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+        <script src="https://doccure-html.dreamguystech.com/template/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+
+		<!-- Custom JS -->
+		<script src="https://doccure-html.dreamguystech.com/template/assets/js/script.js"></script>
+<script>
+
+$('#myModal').on('click', function () {
+  $('#video_fit')[0].play();
+})
+$('#myModal').on('click', function () {
+  $('#video_fit')[0].pause();
+})
+
+</script>
+
+	</body>
+</html>

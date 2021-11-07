@@ -1,0 +1,75 @@
+{% if results.count > 0%}
+<div class="elementor-container elementor-column-gap-default">
+	<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f2e1dee" data-id="f2e1dee" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+
+<div class="elementor-widget-container" >
+
+<div class="carousel-style-fullpost woocommerce showrow-4" style="display: flex; ">
+
+{%for test in results%}
+			 
+													<div class="product col_item woo_grid_compact two_column_mobile type-product rh-hover-up " style="margin-right: 25px;margin-left: 25px;">
+		<div class="button_action rh-shadow-sceu pt5 pb5">
+			<div>
+										<div class="heart_thumb_wrap text-center"><span class="flowhidden cell_wishlist"><span class="heartplus" data-post_id="181" data-informer="240"><span class="ml5 rtlmr5 wishaddedwrap" id="wishadded181">Added to wishlist</span><span class="ml5 rtlmr5 wishremovedwrap" id="wishremoved181">Removed from wishlist</span> </span></span><span id="wishcount181" class="thumbscount">240</span> </div>  
+			</div>
+								<span class="compare_for_grid">            
+																	  
+					<span class="wpsm-button wpsm-button-new-compare addcompare-id-181 white small not-incompare comparecompact" data-addcompare-id="181"><i class="rhicon re-icon-compare"></i><span class="comparelabel">Add to compare</span></span> 
+				</span>
+																		
+		</div>   
+							<span class="onsale"><span>- 31%</span></span>         
+		<figure class="mb15 mt25 position-relative">    
+			<a class="img-centered-flex rh-flex-justify-center rh-flex-center-align" href="">
+								<img loading="lazy" src="https://recompare.wpsoul.net/wp-content/themes/rehub-theme/images/default/blank.gif" data-src="https://www.wellthy.care/wp-content/uploads/2018/02/annual-medical-tests-diabetes.jpg" alt="ZEROTECH DOBBY Mini Selfie Quadcopter" class="lazyload " width="268" height="169">      
+						   
+			</a>  
+			 
+			<div class="gridcountdown"></div>        
+		</figure>
+		<div class="cat_for_grid lineheight15">
+					<a href="https://recompare.wpsoul.net/product-category/selfie-drones/" class="woocat">Lab Tests</a>                         
+		</div>
+		 
+		<h3 class="">
+							<a>{{test.test_name}}</a>
+		</h3>
+				 
+		<!-- <div class="rh_woo_star" title="Rated 3 out of 5"><span class="rhwoostar rhwoostar1 active">&#9733;</span><span class="rhwoostar rhwoostar2 active">&#9733;</span><span class="rhwoostar rhwoostar3 active">&#9733;</span><span class="rhwoostar rhwoostar4">&#9733;</span><span class="rhwoostar rhwoostar5">&#9733;</span></div>  -->
+																			<div class="font80 greycolor lineheight15">
+			<div class="mb10 compare-domain-icon"><span></span><span class="compare-domain-text">{{test.hosp.hosp_name}}</span></div>        </div>
+			<div class="woo_code_zone_loop clearbox"><div class="border-top mb10 mt15"></div>
+	<ul class="font80 mb0 ml0">
+	<li class="ml15 list-type-disc mb0 lineheight15"><span><b>Address:</b></span> {{test.hosp.hosp_address}}</li>
+	<!-- <li class="ml15 list-type-disc mb0  lineheight15"><span>Flight time (m):</span> 9</li> -->
+	</ul></div>    
+	
+		<div class="border-top pt10 pr10 pl10 pb10 rh-flex-center-align abposbot">
+			<div class="price_for_grid floatleft rehub-btn-font mr10">
+				
+		<span class="price"><del><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>129.99</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{test.test_price}}</bdi></span></ins></span>
+			</div>
+			<div class="rh-flex-right-align btn_for_grid floatright">
+				 
+										<a class="font90 greencolor" href="https://recompare.wpsoul.net/product/zerotech-dobby-mini-selfie-quadcopter/">+ 1 more</a>
+								   
+										
+							
+			</div>            
+		</div>
+			   
+	</div> 
+						
+			 
+														
+						{%endfor%}
+						</div>
+</div>
+</div>
+</div>
+</div>
+						{%else%}
+						<li>!  Nothing Found  !</li>
+						{%endif%}
