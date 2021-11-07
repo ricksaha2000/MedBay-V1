@@ -1,0 +1,709 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="/static/favicon-32x32.png" type="image/gif" >
+<title>AMDERE BOT</title>
+</head>
+<body style="background-image:linear-gradient(to right, rgba(255,0,0,0), rgb(73, 206, 230));">
+<img src="/static/robot 1.png" style="width: 15%;height: 20%;float: left;  
+margin: 5px; margin-top:20rem;">
+<img src="/static/robot 3.png" style="width: 15%;height: 20%;float: right;margin: 5px; ">
+
+<h1 style=" margin-top:2rem;color:#8A140E;">AMDERE BOT</h1>
+<h3 style="color:#8A140E;">I am there...</h3>
+<div>
+<div id = "chatbox">
+<p class = "botText"><span>Hi!I am Amdere bot.....
+
+    When it hasn't been your day, your week, your month
+    Or even your year, but
+    I'll be there for you</span></p>
+</div>
+<div id = "userInput">
+<input id ="textInput" type ="text" name="msg" placeholder="Talk to me!">
+<input id = "buttonInput"  type = "submit" value="Send">
+</div>
+<script>
+function getBotResponse(){
+var rawText = $("#textInput").val();
+var userHtml = '<p class = "userText"><span>' + rawText + '</span></p>';
+$("#textInput").val("");
+$("#chatbox").append(userHtml);
+document.getElementById('userInput').scrollIntoView({block:'start',behaviour:'smooth'});
+$.get("/get", {msg:rawText }).done(function(data) {
+var botHtml = '<p class ="botText"><span>' + data + '</span></p>';
+$("#chatbox").append(botHtml);
+document.getElementById('userInput').scrollIntoView({block : 'start',behaviour:'smooth'});
+});
+}
+$("#textInput").keypress(function(e) {
+if(e.which == 13) {
+getBotResponse();
+}
+});
+$("#buttonInput").click(function() {
+getBotResponse();
+})
+</script>
+</div>
+</body>
+</html> -->
+
+
+
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>HOPE</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="https://iqonic.design/themes/vizion/chatbot/images/favicon.ico">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://iqonic.design/themes/vizion/chatbot/css/bootstrap.min.css">
+      <!-- Magnific Popup CSS-->
+      <link rel="stylesheet" href="https://iqonic.design/themes/vizion/chatbot/css/magnific-popup.css">
+      <!-- Circle CSS-->
+      <link rel="stylesheet" href="https://iqonic.design/themes/vizion/chatbot/css/circle.css">
+      <!-- Chatbot -->
+      <link rel="stylesheet" href="https://iqonic.design/themes/vizion/chatbot/css/chatbot.css">
+      <!-- Typography CSS -->
+      <link rel="stylesheet" href="https://iqonic.design/themes/vizion/chatbot/css/typography.css">
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="https://iqonic.design/themes/vizion/chatbot/css/style.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="https://iqonic.design/themes/vizion/chatbot/css/responsive.css">
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/static/style.css">
+   </head>
+   <body>
+      <!-- loading -->
+  
+      <!-- loading End -->
+      <!--=================================
+         Header -->
+      <header id="header">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-9">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                     <a class="navbar-brand" href="http://127.0.0.1:8000/patient/dashboard/">
+                     <!-- <img class="logo" src="https://iqonic.design/themes/vizion/chatbot/images/logo.png" alt="image">
+                     <img class="logo-stiky" src="https://iqonic.design/themes/vizion/chatbot/images/logo-stiky.png" alt="image"> -->
+
+                     <h1 style="color: white;margin-top: -35px;">HOPE</h1>
+                     </a>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                           <li class="nav-item">
+                              <a class="nav-link active" href="index.html">Home</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="about-us.html">About Us</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="features.html">Features</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="contact-us.html">Contact</a>
+                           </li>
+                           <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Pages
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                 <a class="dropdown-item" href="pricing.html">Pricing</a>
+                                 <a class="dropdown-item" href="blog.html">Blog</a>
+                                 <a class="dropdown-item" href="blog-detail.html">Blog Details</a>
+                                 <a class="dropdown-item" href="feedback.html">Feedback</a>
+                                 <a class="dropdown-item" href="404-error.html">404 Error</a>
+                                 <a class="dropdown-item" href="comingsoon.html">Coming Soon</a>
+                                 <a class="dropdown-item" href="support.html">Support</a>
+                                 <a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a>
+                              </div>
+                           </li>
+                        </ul>
+                     </div> -->
+                  </nav>
+               </div>
+               <div class="col-lg-3 text-right">
+                  <!-- <ul class="login">
+                     <li class="d-inline"><a href="login.html">Login</a></li>
+                     <li class="d-inline active"><a href="register.html">Register</a></li>
+                  </ul> -->
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--=================================
+         Header -->
+      <!--=================================
+         Banner -->
+      <div id="banner"  style="background-image:url(https://livewp.site/html/optima/img/home_page/img_box_04.jpg);height: 110%;background-repeat:no-repeat">
+         <br /><br /><br /><br /><br />
+         <div class="banner-text" style="margin-left: 490px;">
+            <div class="container">
+               <div class="row">
+                  <!-- <div class="col-lg-5 col-md-12 col-sm-12">
+                     <h1 class="text-uppercase">WHY FEEL DEPRESSED?</h1>
+                     <h3 class="mt-4">FEEL FREE HERE <br/><span>OUR CHATBOT WILL LOOK OUT FOR YOU</span></h3>
+                     <form>
+                        <div class="form-row align-items-center justify-content-lg-start justify-content-center">
+                        
+                        </div>
+                     </form> -->
+
+                     <div class="col-lg-5 col-md-12 col-sm-12">
+                        <h1 class="text-uppercase" style="color: white;">WHY FEEL DEPRESSED?</h1>
+                        <h3 class="mt-4" style="color: white;">FEEL FREE HERE <br/><span style="color: white;">OUR CHATBOT WILL LOOK OUT FOR YOU</span></h3>
+                        <!-- <form> -->
+                           <div class="form-row align-items-center justify-content-lg-start justify-content-center">
+                           
+                           </div>
+                        <!-- </form> -->
+                  </div>
+                  <div class="col-lg-7 col-md-12 col-sm-12 text-right">
+                     <img class="img-fluid banner-img" src="https://iqonic.design/themes/vizion/chatbot/images/banner/banner-img.png" alt="image" style="opacity: 0;border-style:hidden">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <img class="img-fluid banner-after" src="https://iqonic.design/themes/vizion/chatbot/images/banner/banner-after.png" style="opacity: 0;" alt="image">
+      </div>
+      <!--=================================
+         Banner -->
+      <!--=================================
+         MAIN CONTENT -->
+      <div class="main-content">
+         <!--=================================
+            Features -->
+         <section class="iq-features">
+            <div class="bg"><img src="images/works/work-bg.png" alt="img"></div>
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-lg-6 col-md-12 text-center">
+                     <img class="img-fluid top-img1" src="images/works/01.gif" alt="image"> 
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                     <div class="holderCircle">
+                        <div class="round"></div>
+                        <div class="dotCircle">
+                           <span class="itemDot active itemDot1" data-tab="1">
+                           <i class="ion-ios-timer-outline"></i>
+                           <span class="forActive"></span>
+                           </span>
+                           <span class="itemDot itemDot2" data-tab="2">
+                           <i class="ion-ios-chatboxes-outline"></i>
+                           <span class="forActive"></span>
+                           </span>
+                           <span class="itemDot itemDot3" data-tab="3">
+                           <i class="ion-ios-person-outline"></i>
+                           <span class="forActive"></span>
+                           </span>
+                           <span class="itemDot itemDot4" data-tab="4">
+                           <i class="ion-ios-pricetags-outline"></i>
+                           <span class="forActive"></span>
+                           </span>
+                           <span class="itemDot itemDot5" data-tab="5">
+                           <i class="ion-ios-upload-outline"></i>
+                           <span class="forActive"></span>
+                           </span>
+                           <span class="itemDot itemDot6" data-tab="6">
+                           <i class="ion-ios-briefcase-outline"></i>
+                           <span class="forActive"></span>
+                           </span>
+                        </div>
+                        <div class="contentCircle">
+                           <div class="CirItem title-box active CirItem1">
+                              <h2 class="title"><span>Automate</span></h2>
+                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                              <i class="ion-ios-timer-outline"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem2">
+                              <h2 class="title"><span>Chat </span></h2>
+                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                              <i class="ion-ios-chatboxes-outline"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem3">
+                              <h2 class="title"><span>Responses</span></h2>
+                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                              <i class="ion-ios-person-outline"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem4">
+                              <h2 class="title"><span>Tags</span></h2>
+                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                              <i class="ion-ios-pricetags-outline"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem5">
+                              <h2 class="title"><span>Sharing</span></h2>
+                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                              <i class="ion-ios-upload-outline"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem6">
+                              <h2 class="title"><span>Support</span></h2>
+                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                              <i class="ion-ios-briefcase-outline"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--=================================
+            Features -->
+         <!--=================================
+            How it Works -->
+         <section class="iq-works mt-3">
+            <div class="container">
+               <div class="row justify-content-md-center">
+                  <div class="col-lg-8 col-sm-12 text-center">
+                     <div class="title-box">
+                        <h2 class="title text-dark">Simple Platform to <span>Build & Deploy</span></h2>
+                        <p class="mt-2">Contrary to popular belief, Lorem Ipsum.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="row align-items-center works-arrow1 m-top">
+                  <div class="col-lg-6 col-sm-12">
+                     <div class="title-box">
+                        <h2 class="title-light text-dark">Great Way to add Little Fun to Your <span>Corporate World</span></h2>
+                     </div>
+                     <p class="mt-4">It is a long established fact that a reader will be distracted by the readable roots in a piece.</p>
+                      <ul class="mt-4">
+                        <li class="mt-2"><i class="fas fa-check-circle"></i>Contrary to popular belief</li>
+                        <li class="mt-2"><i class="fas fa-check-circle"></i>The standard chunk of Lorem Ipsum used since</li>
+                        <li class="mt-2"><i class="fas fa-check-circle"></i>There are many variations of passages</li>
+                        <li class="mt-2"><i class="fas fa-check-circle"></i>Many desktop publishing packages</li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-6 col-sm-12">
+                     <div class="works-box">
+                        <img class="img-fluid top-bg" src="images/works/work-bg.png" alt="image">
+                        <img class="img-fluid works-img1" src="images/works/works-img1.png" alt="image">
+                        <img class="img-fluid top-img1 i-size" src="images/works/02.gif" alt="image">
+                     </div>
+                  </div>
+               </div>
+               <div class="row align-items-center works-arrow2 m-top">
+                  <div class="col-lg-6 col-sm-12 order-lg-2 order-1">
+                     <div class="title-box">
+                        <h2 class="title-light text-dark">Chatbots are Just Another Way for  <span>Millennials to Chat</span></h2>
+                     </div>
+                     <p class="mt-4">It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+                 </div>
+                  <div class="col-lg-6 col-sm-12 order-lg-1 order-2">
+                     <div class="works-box">
+                        <img class="img-fluid top-bg" src="images/works/work-bg.png" alt="image">
+                        <img class="img-fluid works-img1" src="images/works/works-img1.png" alt="image">
+                        <img class="img-fluid top-img1 i-size" src="images/works/01.gif" alt="image">
+                     </div>
+                  </div>
+               </div>
+               <div class="row align-items-center m-top">
+                  <div class="col-lg-6 col-sm-12">
+                     <div class="title-box">
+                        <h2 class="title-light text-dark">Positive Feelings + Reduced Friction =  <span>Fun & Conversions</span></h2>
+                     </div>
+                     <p class="mt-4">It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+                     <a class="button grey mt-2" href="#" role="button">Read More</a>
+                  </div>
+                  <div class="col-lg-6 col-sm-12">
+                     <div class="works-box">
+                        <img class="img-fluid top-bg" src="images/works/work-bg.png" alt="image">
+                        <img class="img-fluid works-img1" src="images/works/works-img1.png" alt="image">
+                        <img class="img-fluid top-img1 i-size" src="images/works/02.gif" alt="image">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--=================================
+            How it Works -->
+         <!--=================================
+            About Us -->
+         <section class="iq-about mt-1">
+            <div class="bg"><img src="images/works/work-bg.png" alt="img"></div>
+            <div class="container">
+               <div class="row justify-content-md-center">
+                  <div class="col-lg-8 col-sm-12 text-center">
+                     <div class="title-box">
+                        <h2 class="title text-dark">The Best Way to know What They Want is <span>Through a Chatbot.</span></h2>
+                        <p class="mt-4">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from a Latin professor.</p>
+                     </div>
+                     <div class="mt-4">
+                        <a href="about-us.html" class="read-more mt-5">Learn More</a>
+                     </div>
+                     <img class="img-fluid about-img mt-5" src="images/about/about-img.gif" alt="image">
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--=================================
+            About Us -->
+         <!--=================================
+            Blog -->
+         <section class="iq-blog mt-2">
+            <div class="container">
+               <div class="row justify-content-md-center">
+                  <div class="col-sm-8 text-center">
+                     <div class="title-box">
+                        <h2 class="title text-dark">Recent <span>Stories </span></h2>
+                        <p class="mt-2">Contrary to popular belief, Lorem Ipsum.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="owl-carousel mt-5" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="2" data-items-laptop="2" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1">
+                  <div class="item">
+                     <div class="blog-box">
+                        <div class="row no-gutters row-eq-height">
+                           <div class="col-sm-6 iq-shadow">
+                              <div class="content">
+                                 <h5 class="mb-2"><a href="blog-detail.html">Established fact that a reader will be</a></h5>
+                                 <ul>
+                                    <li><span>By:</span> <a href="#">Admin</a></li>
+                                    <li>May 10, 2018</li>
+                                 </ul>
+                                 <p class="mt-4">Build virtual agents to automate business processes such as front desk customer engagement.</p>
+                                 <ul class="iq-tag mt-4">
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Style</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <img class="img-fluid" src="images/blog/blog-img1.jpg" alt="image">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="blog-box">
+                        <div class="row no-gutters row-eq-height">
+                           <div class="col-sm-6 iq-shadow">
+                              <div class="content">
+                                 <h5 class="mb-2"><a href="blog-detail.html">Established fact that a reader will be</a></h5>
+                                 <ul>
+                                    <li><span>By:</span> <a href="#">Admin</a></li>
+                                    <li>May 10, 2018</li>
+                                 </ul>
+                                 <p class="mt-4">Build virtual agents to automate business processes such as front desk customer engagement.</p>
+                                 <ul class="iq-tag mt-4">
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Style</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <img class="img-fluid" src="images/blog/blog-img2.jpg" alt="image">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="blog-box">
+                        <div class="row no-gutters row-eq-height">
+                           <div class="col-sm-6 iq-shadow">
+                              <div class="content">
+                                 <h5 class="mb-2"><a href="blog-detail.html">Established fact that a reader will be</a></h5>
+                                 <ul>
+                                    <li><span>By:</span> <a href="#">Admin</a></li>
+                                    <li>May 10, 2018</li>
+                                 </ul>
+                                 <p class="mt-4">Build virtual agents to automate business processes such as front desk customer engagement.</p>
+                                 <ul class="iq-tag mt-4">
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Style</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <img class="img-fluid" src="images/blog/blog-img1.jpg" alt="image">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="blog-box">
+                        <div class="row no-gutters row-eq-height">
+                           <div class="col-sm-6 iq-shadow">
+                              <div class="content">
+                                 <h5 class="mb-2"><a href="blog-detail.html">Established fact that a reader will be</a></h5>
+                                 <ul>
+                                    <li><span>By:</span> <a href="#">Admin</a></li>
+                                    <li>May 10, 2018</li>
+                                 </ul>
+                                 <p class="mt-4">Build virtual agents to automate business processes such as front desk customer engagement.</p>
+                                 <ul class="iq-tag mt-4">
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Style</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <img class="img-fluid" src="images/blog/blog-img2.jpg" alt="image">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--=================================
+            Blog -->
+         <!--=================================
+            Clients -->
+         <section class="iq-clients">
+            <div class="container">
+               <div class="row justify-content-md-center">
+                  <div class="col-lg-12 col-sm-12 text-center">
+                     <div class="title-box">
+                        <h3 class="title text-dark">Worldwide Our <span class="timer" data-to="6000" data-speed="5000">6000 +</span> Satisfied Client Using Chatbot</h3>
+                        <p class="mt-2">Contrary to popular belief, Lorem Ipsum.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="owl-carousel mt-4" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="5" data-items-laptop="5" data-items-tab="4" data-items-mobile="2" data-items-mobile-sm="1">
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"><img class="img-fluid"  src="images/clients/clients-img1.png" alt="image" data-toggle="tooltip" title="HTML"> </a> 
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"><img class="img-fluid" src="images/clients/clients-img2.png" alt="image" data-toggle="tooltip" title="Wordpress"></a>  
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"><img class="img-fluid" src="images/clients/clients-img3.png" alt="image" data-toggle="tooltip" title="Shopify"></a>  
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"><img class="img-fluid" src="images/clients/clients-img4.png" alt="image" data-toggle="tooltip" title="CSS"></a> 
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"><img class="img-fluid" src="images/clients/clients-img5.png" alt="image" data-toggle="tooltip" title="Jquery"></a>  
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"> <img class="img-fluid" src="images/clients/clients-img6.png" alt="image" data-toggle="tooltip" title="Bootstrap"></a>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"><img class="img-fluid"  src="images/clients/clients-img1.png" alt="image" data-toggle="tooltip" title="HTML"> </a> 
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"><img class="img-fluid" src="images/clients/clients-img2.png" alt="image" data-toggle="tooltip" title="Wordpress"></a>  
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"><img class="img-fluid" src="images/clients/clients-img3.png" alt="image" data-toggle="tooltip" title="Shopify"></a>  
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"><img class="img-fluid" src="images/clients/clients-img4.png" alt="image" data-toggle="tooltip" title="CSS"></a> 
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"><img class="img-fluid" src="images/clients/clients-img5.png" alt="image" data-toggle="tooltip" title="Jquery"></a>  
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="clients-box text-center">
+                        <a href="#"> <img class="img-fluid" src="images/clients/clients-img6.png" alt="image" data-toggle="tooltip" title="Bootstrap"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--=================================
+            Clients -->
+      </div>
+      <!--=================================
+         MAIN CONTENT -->
+      <!--=================================
+         Footer -->
+      <footer>
+         <img class="img-fluid footer-before" src="images/footer-before.png" alt="image">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-3 col-md-4 col-sm-12 re-center">
+                  <a href="index.html"><img class="img-fluid logo" alt="#" src="images/footer-logo.png"></a>
+                  <div class="link mt-2">Design By <a href="https://iqonicthemes.com/">iqonictheme</a></div>
+               </div>
+               <div class="col-lg-6 col-md-4 col-sm-12 text-center text-uppercase">
+                  <ul class="copyright">
+                     <li class="d-inline ml-4 mr-4"><a href="privacy-policy.html">Privacy Policy</a></li>
+                     <li class="d-inline ml-4 mr-4"><a href="contact-us.html">Contact Us</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-3 col-md-4 col-sm-12 text-right r-mt3">
+                  <ul class="media-box">
+                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- back-to-top -->
+         <div id="back-to-top">
+            <a class="top" id="top" href="#top"><i class="ion-ios-arrow-thin-up"></i></a>
+         </div>
+         <!-- back-to-top End -->
+      </footer>
+      <!--=================================
+         Footer -->  
+      <!--=================================
+         Chatbot -->     
+      <div id="body">
+         <div id="chat-circle" class="btn btn-raised">
+            😃
+         </div>
+         <div class="chat-box" >
+            <div class="chat-box-header" >
+               <h5 class="title">MedBot</h5>
+               <span class="chat-box-toggle" >X</span>
+            </div>
+            <!-- <div id = "chatbox"  > -->
+                <div class="chat-box-body" style="width: 100% !important;" id = "chatbox">
+                    <div class="chat-box-overlay"> 
+                    </div>
+                    <div class="chat-logs" id="chatter">
+                    </div>
+                <!-- <p class = "botText"><span>Hi!I am Amdere bot.....
+                
+                    When it hasn't been your day, your week, your month
+                    Or even your year, but
+                    I'll be there for you</span></p> -->
+                </div>
+                <div id = "userInput" class="chat-input" style="width: 80% !important; margin-top: 30px;!important  ">
+                <input id ="textInput" type ="text" style="margin-bottom: 5px;!important" name="msg" placeholder="We are listening!!">
+                <input id = "buttonInput" class="chat-submit" style="color: white !important; width: 20%;"  type = "submit" value="Send">
+                </div>
+               
+                </div>
+            <!-- <div class="chat-box-body" id = "chatbox">
+               <div class="chat-box-overlay">   
+               </div>
+               <div class="chat-logs">
+               </div>
+            </div> -->
+            <!-- <div class="userInput">
+               <form>
+                  <input type="text" id="textInput" placeholder="Send a message..."/>
+                  <button type="submit" class="chat-submit" id="buttonInput"><i class="ion-ios-paperplane"></i></button>
+               </form>
+            </div> -->
+         </div>
+      <!-- </div> -->
+
+     
+
+      <script>
+        var INDEX = 0; 
+
+  function getBotResponse(){
+  var rawText = $("#textInput").val();
+  // var userHtml = '<p class = "userText"><span>' + rawText + '</span></p>';
+  INDEX++;
+  var userHtml="";
+userHtml += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg self\">";
+userHtml += "          <span class=\"msg-avatar\">";
+userHtml += "          <\/span>";
+userHtml += "          <div class=\"cm-msg-text\">";
+userHtml += rawText;
+userHtml += "          <\/div>";
+
+userHtml += "        <\/div>";
+  $("#textInput").val("");
+  $("#chatter").append(userHtml);
+  document.getElementById('userInput').scrollIntoView({block:'start',behaviour:'smooth'});
+  $.get("/get", {msg:rawText }).done(function(data) {
+  // var botHtml = '<p class ="botText"><span>' + data + '</span></p>';
+
+  var botHtml="";
+botHtml += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
+botHtml += "          <span class=\"msg-avatar\">";
+botHtml += "          <\/span>";
+botHtml += "          <div class=\"cm-msg-text\">";
+botHtml += data;
+botHtml += "          <\/div>";
+
+botHtml += "        <\/div>";
+  $("#chatter").append(botHtml);
+  document.getElementById('userInput').scrollIntoView({block : 'start',behaviour:'smooth'});
+  });
+  }
+  $("#textInput").keypress(function(e) {
+  if(e.which == 13) {
+  getBotResponse();
+  $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
+
+  }
+  });
+  $("#buttonInput").click(function() {
+  getBotResponse();
+  $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
+
+  })
+  </script>
+      <!-- <div>
+        <div id = "chatbox">
+        
+        </div>
+        <div id = "userInput">
+        <input id ="textInput" type ="text" name="msg" placeholder="Talk to me!">
+        <input id = "buttonInput"  type = "submit" value="Send">
+        </div>
+      
+        </div> -->
+      <!--=================================
+         Chatbot --> 
+      <!--=================================
+         Cookies -->
+      <!-- <div id="cookie_div" class="align-items-center"> We use cookies to give you tailored experiences on our website.
+         <a class="button grey text-right ml-3" href="#" role="button" id="cookie">Accept </a>
+      </div> -->
+      <!--=================================
+         Cookies -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://iqonic.design/themes/vizion/chatbot/js/jquery-3.3.1.min.js"></script>
+      <script src="https://iqonic.design/themes/vizion/chatbot/js/popper.min.js"></script>
+      <script src="https://iqonic.design/themes/vizion/chatbot/js/bootstrap.min.js"></script>
+      <!-- Owl Carousel -->
+      <script src="https://iqonic.design/themes/vizion/chatbot/js/owl.carousel.min.js"></script>
+      <!-- Wow -->
+      <script src="https://iqonic.design/themes/vizion/chatbot/js/wow.min.js"></script>
+      <!-- App Min -->
+      <script src="https://iqonic.design/themes/vizion/chatbot/js/app.min.js"></script>
+      <!-- Circle -->
+      <script src="https://iqonic.design/themes/vizion/chatbot/js/circle.js"></script>
+      <!-- Chatbot -->
+      <script src="https://iqonic.design/themes/vizion/chatbot/js/chatbot.js"></script>
+      <!-- main -->
+      <script src="https://iqonic.design/themes/vizion/chatbot/js/main.js"></script>
+      <!-- Custom -->
+      <script src="https://iqonic.design/themes/vizion/chatbot/js/custom.js"></script>
+   </body>
+</html>
