@@ -10,7 +10,7 @@ from django.core.paginator import Paginator
 from django.contrib.auth import login
 # from decorators import customer_required
 from django.contrib.auth.decorators import login_required
-import users.face_detect as face_detect
+# import users.face_detect as face_detect
 from users.models import Profile,User
 from orders.models import Order
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
@@ -21,13 +21,14 @@ from users.forms import SellerSignUpForm
 import base64
 from PIL import Image
 from io import BytesIO
-import cv2
+# import cv2
 import numpy as np
 from django.core.files import File
 from django.core.files.base import ContentFile
 import requests
 import os
 from urllib.parse import urlparse
+import requests
 def register_customer(request):
 	if request.user.is_authenticated == False:
 		if request.method == 'POST':
@@ -331,4 +332,8 @@ def deliver_order(request, order_id):
 		return redirect('users:order')
 	order.delivery = True
 	order.save()
+	content=f'Hi Jayit! Your Order has been successfully delivered! Hope our services were helpful to you! Do shop with us again! ~Team MedBay'
+	r = requests.get(url = f"https://rapidapi.rmlconnect.net:9443/bulksms/bulksms?username=rapid-l9xh6359810000&password=617bf2eb245383001100f8a6&type=0&dlr=1&destination=917044659720&source=RMLPRD&message={content}")
+
+	print("Status Code", r.status_code)
 	return redirect('users:order')
