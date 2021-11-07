@@ -1,14 +1,16 @@
 from .models import Profile
 from django.shortcuts import render, redirect
 from django.contrib import messages
-
 import pandas as pd
 import numpy as np
 import sklearn
 from sklearn.neighbors import NearestNeighbors
+import json
+import os
+import requests
 
 df = pd.read_csv(
-    r'C:\\Users\\jayit\\Downloads\\medbay\\AI DIET PLANNER Microservice\\website\\dataset.csv')
+    r'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\AI DIET PLANNER Microservice\\website\\dataset.csv')
 
 
 def Recommend(request):
@@ -18,7 +20,7 @@ def Recommend(request):
 
             def __init__(self):
                 self.df = pd.read_csv(
-                    r'C:\\Users\\jayit\\Downloads\\medbay\\AI DIET PLANNER Microservice\\website\\dataset.csv')
+                    r'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\AI DIET PLANNER Microservice\\website\\dataset.csv')
 
             def get_features(self):
                 # getting dummies of dataset
@@ -89,10 +91,35 @@ def Recommend(request):
         p = list(data['Price'])
         i = range(len(n))
         sc = c
+        headers = {"Content-Type": "application/json;","Authorization":"617bf2eb245383001100f8a6"}
+        tab = '\t'
 
-        data = zip(n, ids, n, c, sc, vn, r, nt, p, p)
+        if request.method == "POST":
+            lengthDrugs = len(n)
+           
+            sendData = {
+    "phone": "+917044659720",
+    "media": {
+      "type": "media_template",
+      "lang_code": "en",
+      "template_name": "welcome",
+    "body":[
 
-        return render(request, "website/recommend.html", {'data': data, 'image': image})
+        {
+            "text":f"DIETUP! Our Top 5 Recommendations for you! MEAL 1:  Name: {n[0]}  Category: {c[0]} Calories: {p[0]}  MEAL 2:  Name: {n[1]}  Category: {c[1]} Calories: {p[1]} MEAL 3:  Name: {n[2]}  Category: {c[2]} Calories: {p[2]}  MEAL 4:  Name: {n[3]}  Category: {c[3]} Calories: {p[3]} MEAL 5:  Name: {n[4]}  Category: {c[4]} Calories: {p[4]}"
+        }
+       
+    ]
+      
+    }
+  }
+            jsonObject = json.dumps(sendData)
+            req = requests.post(url = "https://rapidapi.rmlconnect.net/wbm/v1/message",headers=headers, data = jsonObject)
+            
+
+        data1 = zip(n, ids, n, c, sc, vn, r, nt, p, p)
+
+        return render(request, "website/recommend.html", {'data1': data1, 'image': image})
 
     else:
         messages.error(
