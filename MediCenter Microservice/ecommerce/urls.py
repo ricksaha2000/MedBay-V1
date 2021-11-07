@@ -37,7 +37,7 @@ urlpatterns = [
     path('my-ajax-test-text/', views.myajaxtestviewtext, name='myajaxtestviewtext'),
     path('payments/', include('payments.urls')),
     path('search/' , views.search_titles ,name = 'search' ),
-    path('updates/', include('processdata.urls')),
+    # path('updates/', include('processdata.urls')),
     path('updates/', include('app.urls')),  # add this
     path('updates/daily/',results,name='home'),
     # path('review/', include('personal.urls')),

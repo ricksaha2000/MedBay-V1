@@ -105,3 +105,4 @@ User_100,veg,calcium, kidney_disease hypertension anemia goitre heart_disease di
 7044659720,non-veg,vitamin_c,goitre obesity hypertension,type_o_diet omni_diet low_sodium_diet low_fat_diet gluten_free_diet high_fiber_diet hormone_diet
 9090909090,non-veg,protien carbohydrates vitamin_c,anemia,high_fiber_diet
 9874211004,non-veg,vitamin_c vitamin_d vitamin_e,kidney_disease anemia,low_sodium_diet low_fat_diet gluten_free_diet
+9874611004,non-veg,vitamin_c vitamin_d sodium,pregnancy anemia,high_protien_diet type_o_diet paleo_diet

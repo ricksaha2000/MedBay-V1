@@ -24,9 +24,9 @@ maxlen_questions = 22
 maxlen_answers = 74
 questions = []
 answers = []
-with open(r"C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\questions.txt", "rb") as fp:
+with open(r"C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\questions.txt", "rb") as fp:
     questions = pickle.load(fp)
-with open(r"C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\ans.txt", "rb") as fp:
+with open(r"C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\ans.txt", "rb") as fp:
     answers = pickle.load(fp)
 tokenizer = preprocessing.text.Tokenizer()
 tokenizer.fit_on_texts(questions + answers)
@@ -50,17 +50,17 @@ def load_model(model_filename, model_weights_filename):
     return model
 
 
-encoder = load_model(r'C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\encoder_model\\encoder_model2.json',
-                     r'C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\encoder_model\\encoder_model_weights2.h5')
-decoder = load_model(r'C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\decoder_model\\decoder_model2.json',
-                     r'C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\decoder_model\\decoder_model_weights2.h5')
+encoder = load_model(r'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\encoder_model\\encoder_model2.json',
+                     r'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\encoder_model\\encoder_model_weights2.h5')
+decoder = load_model(r'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\decoder_model\\decoder_model2.json',
+                     r'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\decoder_model\\decoder_model_weights2.h5')
 
 
 @app.route("/")
 def index():
     tts = gTTS(
         text='WHY FEEL DEPRESSED?FEEL FREE HERE! OUR CHATBOT WILL LOOK OUT FOR YOU', lang='en')
-    filename = 'C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\tmp\\temp.mp3'
+    filename = 'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\tmp\\temp.mp3'
     tts.save(filename)
     music = pyglet.media.load(filename, streaming=False)
     music.play()
@@ -76,7 +76,7 @@ def get_bot_response():
     userText = str(userText)
     if(userText == 'I am feeling low today'):
         tts = gTTS(text='You are not alone. All humans undergo the phase of losing self-confidence in their lives. The best way to get over such situations is by trusting your abilities and skills. Self-belief has great powers, it makes the impossible possible', lang='en')
-        filename = 'C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\tmp\\temp.mp3'
+        filename = 'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\tmp\\temp.mp3'
         tts.save(filename)
         music = pyglet.media.load(filename, streaming=False)
         music.play()
@@ -86,7 +86,7 @@ def get_bot_response():
         return("You are not alone. All humans undergo the phase of losing self-confidence in their lives. The best way to get over such situations is by trusting your abilities and skills. Self-belief has great powers, it makes the impossible possible. "+'.')
     if(userText == 'i feel like dying'):
         tts = gTTS(text='It’s totally normal to feel overwhelmed and stressed if you’re going through a tough time, and sometimes it can feel like things will never get better.', lang='en')
-        filename = 'C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\tmp\\temp.mp3'
+        filename = 'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\tmp\\temp.mp3'
         tts.save(filename)
         music = pyglet.media.load(filename, streaming=False)
         music.play()
@@ -96,7 +96,7 @@ def get_bot_response():
     if(userText == 'i need help'):
         tts = gTTS(
             text='Dont worry, I am  here for you. Tell me what you are going through', lang='en')
-        filename = 'C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\tmp\\temp.mp3'
+        filename = 'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\tmp\\temp.mp3'
         tts.save(filename)
         music = pyglet.media.load(filename, streaming=False)
         music.play()
@@ -136,7 +136,7 @@ def get_bot_response():
             s1.remove('end')
             s2 = 'https://'+('').join(s1)
             tts = gTTS(text=decoded_translation[0]+s2, lang='en')
-            filename = 'C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\tmp\\temp.mp3'
+            filename = 'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\tmp\\temp.mp3'
             tts.save(filename)
             music = pyglet.media.load(filename, streaming=False)
             music.play()
@@ -145,7 +145,7 @@ def get_bot_response():
             return(decoded_translation[0]+s2+'.')
         else:
             tts = gTTS(text=decoded_translation[:-3], lang='en')
-            filename = 'C:\\Users\\jayit\\Downloads\\medbay\\Depression Bot Microservice\\tmp\\temp.mp3'
+            filename = 'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\Depression Bot Microservice\\tmp\\temp.mp3'
             tts.save(filename)
             music = pyglet.media.load(filename, streaming=False)
             music.play()

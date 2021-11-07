@@ -9,7 +9,7 @@ class FaceDetection(object):
     def __init__(self):
         self.detector = dlib.get_frontal_face_detector()
         self.predictor = dlib.shape_predictor(
-            "C:\\Users\\jayit\\Downloads\\medbay\\HeartRateMonitorGui\\shape_predictor_68_face_landmarks.dat")
+            "C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\HeartRateMonitorGui\\shape_predictor_68_face_landmarks.dat")
         self.fa = face_utils.FaceAligner(self.predictor, desiredFaceWidth=256)
 
     def face_detect(self, frame):

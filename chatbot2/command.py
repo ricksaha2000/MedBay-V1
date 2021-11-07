@@ -50,10 +50,10 @@ class DiseasePredictCommand(Command):
         # t = "P"
         print("entity pogo rai")
         print(entity)
-        filename = 'C:\\Users\\Jayit\\Downloads\\medbay\\chatbot2\\disease_predict.sav'
+        filename = 'C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\chatbot2\\disease_predict.sav'
         feel = str(entity)
         data = [feel]
-        cv = pickle.load(open("C:\\Users\\Jayit\\Downloads\\medbay\\chatbot2\\vectorizer.pickle", 'rb'))
+        cv = pickle.load(open("C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\chatbot2\\vectorizer.pickle", 'rb'))
         loaded_model = pickle.load(open(filename, 'rb'))
         vect=cv.transform(data).toarray()
         p=loaded_model.predict(vect)
@@ -98,11 +98,11 @@ class DiseasePredictFromSymptomCommand(Command):
         # t = "P"
         print("entity pogo rai")
         print(entity)
-        cls = joblib.load('C:\\Users\\Jayit\\Downloads\\medbay\\chatbot2\\decision_tree.joblib') # classification model
-        cls1 = joblib.load('C:\\Users\\Jayit\\Downloads\\medbay\\chatbot2\\gradient_boost.joblib')
+        cls = joblib.load('C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\chatbot2\\decision_tree.joblib') # classification model
+        cls1 = joblib.load('C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\chatbot2\\gradient_boost.joblib')
 
-        cls3 = joblib.load('C:\\Users\\Jayit\\Downloads\\medbay\\chatbot2\\random_forest.joblib')
-        symp_list = pd.read_csv('C:\\Users\\Jayit\\Downloads\\medbay\\chatbot2\\test_data.csv').columns[:-1]
+        cls3 = joblib.load('C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\chatbot2\\random_forest.joblib')
+        symp_list = pd.read_csv('C:\\Users\jayit\\Downloads\\RAPID\\MedBay-V1\\chatbot2\\test_data.csv').columns[:-1]
         d = np.zeros((len(symp_list)))
         test_case = pd.DataFrame(d).transpose()
         test_case.columns= symp_list
