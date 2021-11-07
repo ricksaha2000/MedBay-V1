@@ -11,7 +11,9 @@ from orders.models import Order
 from django.core.mail import send_mail
 from django.conf import settings
 stripe.api_key = settings.STRIPE_SECRET_KEY
-
+import json
+import os
+import requests
 @login_required(login_url="/users/login")
 def cart_add(request, product_productid):
 	cart = Cart(request)
@@ -151,6 +153,7 @@ def confrm_checkout(request):
 			user_id = request.user.id
 			orders=[]
 			tot_price=0
+			tot_items = "";
 			if name and phone and email and address:
 				for key,value in request.session['cart'].items():
 					item = value['title']
@@ -159,6 +162,7 @@ def confrm_checkout(request):
 					quantity = value['quantity']
 					price = value['price']
 					total = (float(quantity) * float(price))
+					tot_items += ', ' + str(quantity)+ ' ' + str(item)
 					order = Order(item=item,
 					productid=product_object ,
 					quantity=quantity,
@@ -174,8 +178,10 @@ def confrm_checkout(request):
 					orders.append(order)
 					tot_price += order.total
 
-				content='Hi '+request.user.username+'\n\nYour recent order with order id: '+str(order.id)+' has been successfully placed.\
-				Kindly, wait for the Seller to respond to your order.\n'
+				content='Hi '+request.user.username+'! Thank you for shopping with Ayurmed! '+'Your recent order with order id: '+str(order.id)+' has been successfully placed. We are prepping your order' + str(tot_items) + '. Our Team is working hard to deliver to you at the Earliest! Stay Home! Stay Safe! ~Team MedBay'
+				r = requests.get(url = f"https://rapidapi.rmlconnect.net:9443/bulksms/bulksms?username=rapid-l9xh6359810000&password=617bf2eb245383001100f8a6&type=0&dlr=1&destination=917044659720&source=RMLPRD&message={content}")
+				print("Status Code", r.status_code)
+				# print("JSON Response ", r.json())
 				send_mail("Order INVOICE", content, settings.SENDER_EMAIL, [request.user.email], fail_silently=True)
 				content='Hi '+product_object.user.username+'\n\nCurrently an order with order id: '+str(order.id)+' has been successfully placed at your account.\
 				Kindly, check the order and respond favourably to the customer.\n'
