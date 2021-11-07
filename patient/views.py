@@ -7,16 +7,32 @@ from django.views import View
 from doctor.models import Test
 # Create your views here.
 import requests
-
+import json
 class DashboardView(View):
     template_name = "patient/dashboard.html"
 
     def get(self, request):
         return render(request, self.template_name)
     def post(self, request):
-        content='Hi '+request.user.username+'! '+'Your recent booking with booking id: B2X1H3'+' has been confirmed on 14 Nov 2021 with Dr. Ruby Perrin - Dental. Stay Safe! ~Team MedBay'
-        r = requests.get(url = f"https://rapidapi.rmlconnect.net:9443/bulksms/bulksms?username=rapid-l9xh6359810000&password=617bf2eb245383001100f8a6&type=0&dlr=1&destination=917044659720&source=RMLPRD&message={content}")
-        print("Status Code", r.status_code)
+#         headers = {"Content-Type": "application/json;","Authorization":"617bf2eb245383001100f8a6"}
+#         sendData = {
+#     "phone": "+917044659720",
+#     "media": {
+#       "type": "media_template",
+#       "lang_code": "en",
+#       "template_name": "welcome",
+#     "body":[
+
+#         {
+          
+#         }
+       
+#     ]
+      
+#     }
+#   }
+#         jsonObject = json.dumps(sendData)
+#         req = requests.post(url = "https://rapidapi.rmlconnect.net/wbm/v1/message",headers=headers, data = jsonObject)
         print("ZWEEEEEEEEEEEEE")
 
         return render(request, self.template_name)
