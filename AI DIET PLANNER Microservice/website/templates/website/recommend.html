@@ -1,0 +1,449 @@
+{% comment %}
+{% extends 'website/basic.html' %}
+
+{% block title%} Recommendation {% endblock %}
+
+
+ {% block css %}
+
+ input{
+ background-color:green;
+ margin-bottom:10px;
+ color:white;
+ }
+ .col{
+ background-color:white;
+ }
+
+ pre{
+ font-size:18px;
+ font-family:bold;
+ color:red;
+ }
+
+ body{
+     background-image:url('https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+     background-repeat:no-repeat;
+     background-size:cover;
+ }
+
+ {% endblock %}
+
+        {% block homeurl %} "\"{% endblock %}
+        {% block abouturl %} "\about/" {% endblock %}
+        {% block contacturl %} "\contact/" {% endblock %}
+        {% block mealurl %} "" {% endblock %}
+        {% block orderurl %} "\order/" {% endblock %}
+
+        {% block mealactive %} active {% endblock %}
+
+
+{% block body %} {% endcomment %}
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% comment %} <title>Health Coach - Free Bootstrap 4 Template by Colorlib</title> {% endcomment %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://preview.colorlib.com/theme/healthcoach/css/A.animate.css+owl.carousel.min.css+owl.theme.default.min.css+magnific-popup.css+bootstrap-datepicker.css+jquery.timepicker.css+flaticon.css+style.css,Mcc.CAbxSlj7NC.css.pagespeed.cf.IMBQmpkWo9.css"/>
+
+<style>
+   {% block css %} {% endblock %}
+
+
+#tab{
+    font-size:18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon{
+	font-size:40px;
+	color:white;
+}
+
+.modal-content{
+    border-radius:20px;
+    /* background-image:url('https://www.freevector.com/uploads/vector/preview/19202/5.jpg'); */
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:350px;
+    height:auto;
+}
+
+.page-footer{
+    background-image:url('https://images.unsplash.com/photo-1535443274868-756b0f070b6e?ixlib=rb-1.2.1&w=1000&q=80');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+#profilebtn:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,15,20,0.2), 0 6px 20px 0 rgba(0,15,20,0.19);
+	background-color:#a3cb4c;
+}
+
+#profilebtn{
+	background-color:#a3cb4c;
+	width:100%;
+	color:white;
+	padding-top:20px;
+	border-radius:25px;
+	font-size:
+
+}
+
+.modal.fade:not(.in).right .modal-dialog {
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(130%, 0, 0);
+}
+
+#text{
+font-weight:bold;
+font-size:18px;
+margin-left:8px;
+color:black;
+}
+
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="container">
+<div class="row justify-content-between">
+
+
+</div>
+</div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+<div class="container">
+<a class="navbar-brand" href="http://127.0.0.1:8000/patient/dashboard/">DIET<span>UP<i class="fa fa-leaf"></i></span></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="fa fa-bars"></span> Menu
+</button>
+<div class="collapse navbar-collapse" id="ftco-nav">
+<ul class="navbar-nav ml-auto">
+ {% comment %} {% block homeurl %} ""{% endblock %}
+        {% block abouturl %} "about/" {% endblock %}
+        {% block contacturl %} "contact/"{% endblock %}
+        {% block mealurl %} "decider/" {% endblock %}
+        {% block orderurl %} "\order/" {% endblock %} {% endcomment %}
+<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item {% block homeactive %} {% endblock %}">
+        <a id="tab" class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {% block mealactive %} {% endblock %}" style="background-color:#a3cb4c;">
+        <a id="tab" class="nav-link" style="color: white;" href="decider/">AI Diet Recommendation </a>
+      </li>
+      <li class="nav-item {% block aboutactive %} {% endblock %}">
+        <a id="tab"  class="nav-link" href="about/">About Us</a>
+      </li>
+
+  {% if user.is_authenticated %}
+      {% comment %} <li class="nav-item {% block orderactive %} {% endblock %}">
+        <a id="tab" class="nav-link" href="\order/">My Orders</a>
+      </li> {% endcomment %}
+  {% endif %}
+	  </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      {% comment %} <button id="tab" class="btn btn-success my-2 my-sm-0" type="submit">Search</button> {% endcomment %}
+    </form>
+
+    {% if user.is_authenticated %}
+    <a role="button" id="tab" data-toggle="modal" data-target="#myModal" style="color:black!important;margin-top:20px!important;" class="btn btn-white">
+            {{request.user.first_name}} {{request.user.last_name}}
+    </a>
+
+    {% else %}
+	<a role="button" id="tab" style="color:black!important;margin-top:20px!important;" class="nav-link  btn btn-white" href="\login/"> Login </a>
+	<a role="button" id="tab" style="color:black!important;margin-top:20px!important;" class="nav-link  btn btn-white" href="\signup/"> SignUp </a>
+
+    {% endif %}
+
+
+</ul>
+</div>
+</div>
+</nav>
+<div class="modal fade right" style="margin-top:90px;" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content" >
+        <div class="modal-body">
+			<div class="text-center"><img class="rounded-circle" src="{{ image }}" style="width:120px;height:120px"></div>
+			<hr>
+			<p id="text">Email : {{request.user.email}}</p>
+			<p id="text">Name : {{request.user.first_name}} {{request.user.last_name}}</p>
+
+			<p id="text">Phone : {{request.user}}</p>
+			<form action="\create_profile/">
+			{% csrf_token %}
+    			<div><input id="profilebtn" class="p-2 my-2" type="button" onclick="window.location.href = '\\create_profile/';" value="Edit profile"></div>
+			</form>
+			<form action="\logout/" method="post">
+			{% csrf_token %}
+    			<div><input id="profilebtn" class="p-2 my-1" type="submit" value="Logout"></div>
+    		</form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- profile end -->
+
+{% for message in messages %}
+
+<div class="alert alert-{{message.tags}} mb-0 alert-dismissible fade show" role="alert">
+  <font style="font-size:18px"> <strong>Message: </strong> {{message}}</font>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+{% endfor%}
+
+<!-- END nav -->
+
+
+
+
+
+
+<section class="ftco-section bg-light">
+<div class="container">
+<div class="row justify-content-center pb-5 mb-3">
+<div class="col-md-7 heading-section text-center ftco-animate">
+<span class="subheading mb-3">Food &amp; Diet</span>
+<h2>  We Provide Perfect Recommendations!</h2>
+</div>
+</div>
+
+
+<div class="row">
+{% load static %}
+
+{% for (a,id,n,c,sc,vn,r,nt,p,b) in data %}
+
+
+<div class="col-md-6 col-lg-3 ftco-animate">
+<div class="block-7">
+<div class="text-center">
+<h4 class="heading-2" id="name{{ id }}">{{n|title|truncatechars:18}}</h4>
+<span class="excerpt d-block">Category: {{c}}</span>
+<span class="price"> <span class="number">{{p}}</span><sup>Cals</sup></span>
+<ul class="pricing-text mb-5">
+<li><span class="fa fa-check mr-2"></span>{{sc}}               </li>
+<li><span class="fa fa-check mr-2"></span>{{nt}}</li>
+<li><span class="fa fa-check mr-2"></span>Rate : {{r}}</li>
+
+</ul>
+<a href="#" class="btn btn-primary px-4 py-3">KNOW MORE</a>
+</div>
+</div>
+</div>
+    {% comment %} <div style="border:solid" class="col-md-3 mb-2">
+    <table>
+        <tr>
+            <td><h2 id="name{{ id }}" class="my-3" style="color:blue">{{n|title}}</h2></td>
+       </tr>
+        <tr>
+            <td><h5 style="color:red">Category :- {{c}}</h5></td>
+        </tr>
+        <tr>
+            <td><p><pre style="color:navy;font-size:20px">{{sc}}               {{nt}}</pre></p></td>
+       </tr>
+        <tr>
+            <td>
+        		{% if vn == 'veg' %}
+            		<img style="width:50px;height:50px" src="{% static 'front/images/veg.jpg'%}"><font style="font-weight:bold;font-size:17px;color:blue">   Veg</font>
+            	{% else %}
+                	<img style="width:50px;height:50px" src="{% static 'front/images/nonveg.jpg'%}"><font style="font-weight:bold;font-size:17px;color:blue">Non-Veg</font>
+                {% endif %}
+           </td>
+        </tr>
+        <tr>
+             <td><pre style="color:navy;font-size:20px"> Rate :- {{r}}       Price:- {{p}}</pre> </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div>
+                        <button style="display:none;"  id="cancel-{{id}}" class="cancel btn btn-danger mb-3" value="{{ id }}">Cancel</button>
+                        <button id="buy-{{id}}" class="buy btn btn-success mb-3" value="{{ id }}">Buy it</button>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+	</div> {% endcomment %}
+
+{% endfor %}
+{% comment %} <div class="col-md-6 col-lg-3 ftco-animate">
+<div class="block-7">
+<div class="text-center">
+<h4 class="heading-2" id="name{{ id }}">{{n|title}}</h4>
+<span class="excerpt d-block">Category: {{c}}</span>
+<span class="price"><sup>$</sup> <span class="number">{{p}}</span></span>
+<ul class="pricing-text mb-5">
+<li><span class="fa fa-check mr-2"></span>{{sc}}               </li>
+<li><span class="fa fa-check mr-2"></span>{{nt}}</li>
+<li><span class="fa fa-check mr-2"></span>Rate : {{r}}</li>
+
+</ul>
+<a href="#" class="btn btn-primary px-4 py-3">Get Started</a>
+</div>
+</div>
+</div> {% endcomment %}
+
+</div>
+</div>
+</section>
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<script src="https://preview.colorlib.com/theme/healthcoach/js/jquery.min.js.pagespeed.jm.xZH2zNe7lE.js"></script>
+<script src="https://preview.colorlib.com/theme/healthcoach/js/jquery-migrate-3.0.1.min.js+popper.min.js+bootstrap.min.js.pagespeed.jc.prUGHOk_WL.js"></script><script>eval(mod_pagespeed_shM7nCwkqK);</script>
+<script>eval(mod_pagespeed_GD$bNh76nA);</script>
+<script>eval(mod_pagespeed_jTGwHpc2kV);</script>
+<script src="https://preview.colorlib.com/theme/healthcoach/js/jquery.easing.1.3.js+jquery.waypoints.min.js+jquery.stellar.min.js+jquery.animateNumber.min.js+bootstrap-datepicker.js.pagespeed.jc.bCnpWfsncm.js"></script><script>eval(mod_pagespeed_ZkUgEI$SLA);</script>
+<script>eval(mod_pagespeed_PygtSvTDu6);</script>
+<script>eval(mod_pagespeed_Ga8dx93_jE);</script>
+<script>eval(mod_pagespeed_jv9rkErccr);</script>
+<script>eval(mod_pagespeed_7YJ$uqKVlg);</script>
+<script src="https://preview.colorlib.com/theme/healthcoach/js/jquery.timepicker.min.js+owl.carousel.min.js+jquery.magnific-popup.min.js+scrollax.min.js+google-map.js.pagespeed.jc.9RMZXqRUQm.js"></script><script>eval(mod_pagespeed_oJL1ImAdM6);</script>
+<script>eval(mod_pagespeed__B0W_zSV9$);</script>
+<script>eval(mod_pagespeed_rq$0GddJyP);</script>
+<script>eval(mod_pagespeed_t7KLlVo25O);</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script>eval(mod_pagespeed_KGIvgdz8OB);</script>
+<script src="https://preview.colorlib.com/theme/healthcoach/js/main.js.pagespeed.jm.VYo39QzLmb.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-23581568-13');</script>
+</body>
+</html>
+{% comment %} <div style="background-color:white" class="container mb-5 pb-5 pt-5 mt-5">
+<h1 class="text-center" style="color:red">Recommendations For You</h1>
+<form id="myForm" action="\buy/" method="post">
+{% csrf_token %}
+    <input id="inpt" style="display:none" type="text" name="product_buy">
+</form>
+<div id="purchasebtn" style="visibility:hidden" class="text-right"><button style="width:25%;font-size:20px" class="btn btn-primary p-2" onclick="submit()">Save All Purchases</button></div>
+
+{% load static %}
+<div class="row mx-2 my-4">
+
+{% for (a,id,n,c,sc,vn,r,nt,p,b) in data %}
+
+    <div style="border:solid" class="col-md-3 mb-2">
+    <table>
+        <tr>
+            <td><h2 id="name{{ id }}" class="my-3" style="color:blue">{{n|title}}</h2></td>
+       </tr>
+        <tr>
+            <td><h5 style="color:red">Category :- {{c}}</h5></td>
+        </tr>
+        <tr>
+            <td><p><pre style="color:navy;font-size:20px">{{sc}}               {{nt}}</pre></p></td>
+       </tr>
+        <tr>
+            <td>
+        		{% if vn == 'veg' %}
+            		<img style="width:50px;height:50px" src="{% static 'front/images/veg.jpg'%}"><font style="font-weight:bold;font-size:17px;color:blue">   Veg</font>
+            	{% else %}
+                	<img style="width:50px;height:50px" src="{% static 'front/images/nonveg.jpg'%}"><font style="font-weight:bold;font-size:17px;color:blue">Non-Veg</font>
+                {% endif %}
+           </td>
+        </tr>
+        <tr>
+             <td><pre style="color:navy;font-size:20px"> Rate :- {{r}}       Price:- {{p}}</pre> </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div>
+                        <button style="display:none;"  id="cancel-{{id}}" class="cancel btn btn-danger mb-3" value="{{ id }}">Cancel</button>
+                        <button id="buy-{{id}}" class="buy btn btn-success mb-3" value="{{ id }}">Buy it</button>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+	</div>
+
+{% endfor %}
+</div>
+
+</div>
+
+<script>
+
+function submit()
+{
+      let sum = "";
+      for (let salary of Object.values(ids)) {
+        sum = sum + salary+" ";
+      }
+      console.log(sum);
+
+      document.getElementById("inpt").value = sum;
+
+      document.getElementById("myForm").submit();
+
+}
+
+
+$('.cancel').click(function(){
+
+    var idv= this.value.toString();
+
+    document.getElementById("buy-"+idv).style.display="block";
+    document.getElementById("cancel-"+idv).style.display="none";
+
+    delete ids[idv];
+
+    console.log(ids);
+
+});
+
+if(sessionStorage.getItem("ids")==null){
+    var ids={};
+}
+
+$('.buy').click(function(){
+
+    var idv= this.value.toString();
+
+    document.getElementById("buy-"+idv).style.display="none";
+    document.getElementById("cancel-"+idv).style.display="block";
+
+    if(ids["id"]!=undefined){
+        ids[idv]=ids[idv];
+    }
+    else{
+        ids[idv]=idv;
+    }
+
+    console.log(ids);
+
+    document.getElementById("purchasebtn").style.visibility="visible";
+
+});
+
+
+</script>
+
+{% endblock %} {% endcomment %}
