@@ -1,4 +1,4 @@
-# MedBay-V1 - A healthier You
+# MedBay-V1 - Ensuring citizen health, Always
 
 # Table of Contents
 
@@ -98,6 +98,7 @@ Made in Django Powered by superior quality design, to intrigue users. The fronte
 - Bootstrap, Ajax, jQuery etc.
 
 ## Screenshots
+
 
 
 ## What's next for MedBay-V1
