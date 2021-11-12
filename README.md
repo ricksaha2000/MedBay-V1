@@ -60,7 +60,6 @@ Made in Django Powered by superior quality design, to intrigue users. The fronte
 ## Main features
 	
 
-
 ## Tech stack
 
 - Weavy Django 
@@ -84,8 +83,11 @@ Made in Django Powered by superior quality design, to intrigue users. The fronte
 
 ## What's next for MedBay-V1
 
-Integrating different languages into our chatbots to provide even a better user experience and adding all our ideated modules to the main application. Adding a IoT device like Fitbit to our heart rate monitoring system application Provide a detailed yoga plan recommendation Adding customer feedback portal in the e-test comparison application
-
+ - Integrating different languages into our chatbots to provide even a better user experience and adding all our ideated modules to the main application. 
+ - Adding a IoT device like Fitbit to our heart rate monitoring system application Provide a detailed yoga plan recommendation Adding customer feedback portal in the e-test comparison application
+ - Integration of local languages to our product and expand our products to several more local medicine distributors for better user experience and wider reach out.
+ - Make our chatbot robust to handle more complex enquiry or product detail enquiry
+ - Include a voice based assitant to navigate the entire application
 
 ## Demo
 
