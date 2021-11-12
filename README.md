@@ -69,6 +69,8 @@ Made in Django Powered by superior quality design, to intrigue users. The fronte
 
 ## What's next for MedBay-V1
 
+Integrating different languages into our chatbots to provide even a better user experience and adding all our ideated modules to the main application. Adding a IoT device like Fitbit to our heart rate monitoring system application Provide a detailed yoga plan recommendation Adding customer feedback portal in the e-test comparison application
+
 
 ## Demo
 
