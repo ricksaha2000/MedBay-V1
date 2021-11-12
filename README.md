@@ -58,7 +58,26 @@ Made in Django Powered by superior quality design, to intrigue users. The fronte
 
 
 ## Main features
-	
+
+	1. Multi Authentication via face-recognition
+	2. WORKOUT PLANNER AND MONITOR
+	3. HEART RATE MONITORING SYSTEM
+	4. AI DIET PLANNER 
+	5. AI DRUG RECOMMENDER 
+	6. REALTIME GROUP YOGA POSTURE MONITORING SYSTEM
+	7. DEPRESSION CHATBOT
+	8. WORKOUT PLANNER AND POSTURE DETECTOR
+	9. MEDICAL CHATBOT
+	10.MEDICAL TEST COMPARISON
+	11.PHARMACEUTICAL STORE AYURMED
+	12.Stripe Payment
+	13.AI AUTOMATED ADDITION TO CART
+	14.FOOD REVIEWS VIA SENTIMENT ANALYSIS & GENETIC RANKING ALGORITHM
+	15.Recommender ranking top medicine distributing facilities
+	16.Genetic algorithm ranking the mediicine facilities 
+	17.Genetic algorithm for ranking uses location, reviews, availability and price
+	18.Auto cart addition via voice based chatbot
+	19.Product quantity and price enquiry via the voice based chatbot
 
 ## Tech stack
 
