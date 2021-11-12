@@ -115,6 +115,14 @@ Made in Django Powered by superior quality design, to intrigue users. The fronte
 
 <img width="1004" alt="Screenshot 2021-11-12 at 1 54 03 PM" src="https://user-images.githubusercontent.com/53152779/141437511-c0468d0c-1748-4897-8182-5a9d6f1a016d.png">
 
+<img width="1004" alt="Screenshot 2021-11-12 at 1 55 14 PM" src="https://user-images.githubusercontent.com/53152779/141437611-03e0253b-db45-49cc-b25b-1b1a4a196079.png">
+
+<img width="1004" alt="Screenshot 2021-11-12 at 1 55 24 PM" src="https://user-images.githubusercontent.com/53152779/141437623-af53613a-b8fd-443f-a972-d3636e5f7501.png">
+
+<img width="1004" alt="Screenshot 2021-11-12 at 1 55 34 PM" src="https://user-images.githubusercontent.com/53152779/141437648-9d5156c1-35c3-4c8c-b030-0c7f44737e7b.png">
+
+<img width="1004" alt="Screenshot 2021-11-12 at 1 55 48 PM" src="https://user-images.githubusercontent.com/53152779/141437671-0b8a3b79-bb34-4685-8e48-b9647c43372b.png">
+
 
 ## What's next for MedBay-V1
 
