@@ -62,7 +62,22 @@ Made in Django Powered by superior quality design, to intrigue users. The fronte
 
 
 ## Tech stack
- 
+
+- Weavy Django 
+- RASA NLU 
+- HTML, CSS, JavaScript 
+- Machine Learning Algorithms 
+- Random Forest, Naïve Bayes Classifier 
+- Deep Learning 
+- Posture Detection Algorithms 
+- FFT and Band filtering techniques 
+- NLP Sentiment Analysis Model 
+- GTTS module
+- STRIPE
+- Celery
+- Google Geolocation 
+- Python ML,DL libraries 
+- Bootstrap, Ajax, jQuery etc.
 
 ## Screenshots
 
