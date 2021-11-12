@@ -99,6 +99,21 @@ Made in Django Powered by superior quality design, to intrigue users. The fronte
 
 ## Screenshots
 
+<img width="1004" alt="Screenshot 2021-11-12 at 1 50 54 PM" src="https://user-images.githubusercontent.com/53152779/141437357-b937f22f-876c-4260-aec3-91e96bf85b52.png">
+
+<img width="1004" alt="Screenshot 2021-11-12 at 1 51 11 PM" src="https://user-images.githubusercontent.com/53152779/141437384-4345a5e7-8881-4105-89e6-fd8ed46c6f99.png">
+
+<img width="1004" alt="Screenshot 2021-11-12 at 1 51 45 PM" src="https://user-images.githubusercontent.com/53152779/141437401-85cb9243-d1e3-4aac-ab19-cf5f230c80b2.png">
+
+<img width="1004" alt="Screenshot 2021-11-12 at 1 52 15 PM" src="https://user-images.githubusercontent.com/53152779/141437415-db10a579-3fa5-4b35-ba9e-34c84952af2e.png">
+
+<img width="1004" alt="Screenshot 2021-11-12 at 1 52 32 PM" src="https://user-images.githubusercontent.com/53152779/141437425-a1630b9b-1eda-4f53-84f1-0c5c23852b9e.png">
+
+<img width="1004" alt="Screenshot 2021-11-12 at 1 53 13 PM" src="https://user-images.githubusercontent.com/53152779/141437438-a3fb8e4e-9aac-4b40-9472-36d059e6c456.png">
+
+<img width="1004" alt="Screenshot 2021-11-12 at 1 53 33 PM" src="https://user-images.githubusercontent.com/53152779/141437480-cc67c7fd-4a53-4220-826d-be434af3b8af.png">
+
+<img width="1004" alt="Screenshot 2021-11-12 at 1 54 03 PM" src="https://user-images.githubusercontent.com/53152779/141437511-c0468d0c-1748-4897-8182-5a9d6f1a016d.png">
 
 
 ## What's next for MedBay-V1
